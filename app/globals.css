@@ -1,1 +1,56 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 27 27 27;
+    --foreground: 225 225 225;
+    --muted: 115 115 115;
+    --accent: 254 254 91;
+    /* hex value of rgb(254,254,91) color is  #FEFE5B  */
+  }
+}
+
+@theme {
+  --font-family-inter: var(--font-inter);
+
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-accent: rgb(var(--accent));
+
+  --background-image-firefly-radial: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(253, 255, 80, 0.5) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+
+  --box-shadow-glass-inset: inset 0 17px 5px -9px rgba(254, 254, 91, 0.05);
+  --box-shadow-glass-sm: 5px 5px 20px 0px rgba(254, 254, 91, 0.3);
+
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-spin-slow-reverse: spin-reverse 40s linear infinite;
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
