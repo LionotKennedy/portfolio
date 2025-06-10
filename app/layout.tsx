@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
-import FireFliesBackground from "./FireFliesBackground";
+import FireFliesBackground from "./components/FireFliesBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
