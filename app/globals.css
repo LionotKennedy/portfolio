@@ -68,3 +68,19 @@
 
 /* bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-insert
         hover:shadow-glass-sm */
+
+
+
+
+.glass-effect {
+  background-color: rgba(var(--background), 0.2);
+  border: 1px solid rgba(var(--accent), 0.3);
+  border-style: solid;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-glass-insert);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.glass-effect:hover {
+  box-shadow: var(--shadow-glass-sm);
+}

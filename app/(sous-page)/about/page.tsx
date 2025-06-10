@@ -2,8 +2,8 @@ import Image from "next/image";
 import bg from "../../../public/background/about-background.png";
 import type { JSX } from "react/jsx-runtime";
 import AboutDetails from "@/app/components/about";
-// import HatModel from "@/app/components/models/HatModel";
-// import RenderModel from "@/app/RenderModel";
+import HatModel from "@/app/components/models/HatModel";
+import RenderModel from "@/app/components/RenderModel";
 export default function Home(): JSX.Element {
   return (
     <>
@@ -16,9 +16,9 @@ export default function Home(): JSX.Element {
       />
 
       <div className="w-full h-3/5 xs:h-3/4 sm:h-screen absolute top-1/2 -translate-y-1/2 left-0 z-10">
-        {/* <RenderModel>
+         <RenderModel>
           <HatModel />
-        </RenderModel> */}
+        </RenderModel> 
       </div>
 
       <div className="relative w-full h-screen flex flex-col items-center justify-center">

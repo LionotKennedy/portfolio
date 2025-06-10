@@ -1,3 +1,5 @@
+"use client"
+import type React from "react"
 import ProjectLayout from "./ProjectsLayout";
 
 interface Project {
@@ -8,6 +10,17 @@ interface Project {
 }
 interface ProjectListProps {
   projects: Project[];
+}
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 1.5,
+    },
+  },
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
