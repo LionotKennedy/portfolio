@@ -91,8 +91,8 @@ export const projectsData = [
 
 export const BtnList = [
   { label: "Home", link: "/", icon: "home", newTab: false },
-  { label: "About", link: "/sous-page/about", icon: "about", newTab: false },
-  { label: "Projects", link: "/sous-page/projects", icon: "projects", newTab: false },
+  { label: "About", link: "/about", icon: "about", newTab: false },
+  { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",

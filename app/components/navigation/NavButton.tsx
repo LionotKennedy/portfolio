@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { JSX } from "react/jsx-runtime";
 import Link from "next/link";
+import clsx from "clsx";
 // import { motion } from "framer-motion";
 
 type IconType =
@@ -64,6 +65,7 @@ const NavButton: React.FC<NavButtonProps> = ({
   link,
   icon,
   newTab,
+  labelDirection = "right",
 }) => {
   return (
     <div
@@ -81,7 +83,12 @@ const NavButton: React.FC<NavButtonProps> = ({
         <span className="relative peer w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
           {getIcon(icon)}
           <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
-          <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap">
+          <span
+            className={clsx(
+              "absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap",
+              labelDirection === "left" ? "right-full left-auto" : ""
+            )}
+          >
             {label}
           </span>
         </span>
