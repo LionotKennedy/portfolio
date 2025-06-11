@@ -27,8 +27,8 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
         // variants={item}
         href={demoLink}
         target={"_blank"}
-        className="text-sm md:text-base flex items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6 custom-bg 
-        bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+        className="text-sm md:text-base flex items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6
+        glass-effect custom-btn"
       >
         <div className="flex items-center justify-center space-x-2">
           <h2 className="text-foreground">{name}</h2>

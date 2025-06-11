@@ -22,7 +22,7 @@ const AboutDetails: React.FC = () => {
         <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full">
           <ItemLayout
             className={
-              "col-span-full lg:col-span-8 row-span-2 flex-col items-start  bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+              "col-span-full lg:col-span-8 row-span-2 flex-col items-start glass-effect custom-btn"
             }
           >
             <h2 className="text-xl md:text-2xl text-left w-full capitalize">
@@ -43,7 +43,7 @@ const AboutDetails: React.FC = () => {
           </ItemLayout>
           <ItemLayout
             className={
-              "col-span-full xs:col-span-6 lg:col-span-4 text-accent  bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+              "col-span-full xs:col-span-6 lg:col-span-4 text-accent  glass-effect custom-btn"
             }
           >
             <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
@@ -53,7 +53,7 @@ const AboutDetails: React.FC = () => {
 
           <ItemLayout
             className={
-              "col-span-full xs:col-span-6 lg:col-span-4 text-accent  bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+              "col-span-full xs:col-span-6 lg:col-span-4 text-accent glass-effect custom-btn"
             }
           >
             <p className="font-semibold w-full text-left text-2xl sm:text-5xl">

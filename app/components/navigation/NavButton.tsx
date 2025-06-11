@@ -75,8 +75,8 @@ const NavButton: React.FC<NavButtonProps> = ({
       <Link
         href={link}
         target={newTab ? "_blank" : "_self"}
-        className="text-foreground rounded-full flex items-center justify-center custom-bg
-       bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+        className="text-foreground rounded-full flex items-center justify-center
+       glass-effect custom-btn"
         aria-label={label}
         // name={label}
       >

@@ -13,7 +13,7 @@ const HomeBtn: React.FC = () => {
       target={"_self"}
       className="text-foreground  rounded-full flex items-center justify-center
         custom-bg fixed top-4 left-4 w-fit self-start z-50
-        bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+        glass-effect custom-btn"
       aria-label={"home"}
       //   name={"home"}
       prefetch={false}

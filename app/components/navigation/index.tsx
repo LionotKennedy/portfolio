@@ -3,7 +3,7 @@ import React from "react";
 import { BtnList } from "@/app/data/data";
 import NavButton from "./NavButton";
 import "./navbutton.css"
-import useScreenSize from "../hooks/useScreenSize";
+// import useScreenSize from "../hooks/useScreenSize";
 
 const Navigation: React.FC = () => {
   const angleIncrement = 360 / BtnList.length;

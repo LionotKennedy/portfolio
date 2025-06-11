@@ -2,8 +2,8 @@
 import Image from "next/image";
 import bg from "../public/background/home-background.png";
 import Navigation from "./components/navigation";
-import Wizard from "./components/models/Wizard";
-import RenderModel from "./components/RenderModel";
+// import Wizard from "./components/models/Wizard";
+// import RenderModel from "./components/RenderModel";
 
 export default function Home() {
   return (
@@ -19,9 +19,9 @@ export default function Home() {
 
       <div className="w-full h-screen">
         <Navigation />
-        <RenderModel>
+        {/* <RenderModel>
           <Wizard /> 
-        </RenderModel>
+        </RenderModel> */}
       </div>
       </main>
   );

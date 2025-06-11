@@ -116,7 +116,7 @@ const Form: React.FC = () => {
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 
-           bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+          glass-effect custom-btn"
         />
         {errors.name && (
           <span className="inline-block self-start text-accent">
@@ -130,7 +130,7 @@ const Form: React.FC = () => {
           placeholder="email"
           {...register("email", { required: "This field is required!" })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
-           bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+          glass-effect custom-btn"
         />
         {errors.email && (
           <span className="inline-block self-start text-accent">
@@ -153,7 +153,7 @@ const Form: React.FC = () => {
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
-           bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] custom-btn"
+          glass-effect custom-btn"
         />
         {errors.message && (
           <span className="inline-block self-start text-accent">

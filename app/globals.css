@@ -61,26 +61,22 @@
   box-shadow: 5px 5px 20px 0px rgba(254, 254, 91, 0.3);
 }        
 
-/* .custom-bg {
-  background-color: var(--background)/20;
-  border:  3px solid var(--accent);
-} */
+
+.glass-effect {
+  background-color: rgba(27 ,27, 27, 0.2);
+  border: 1px solid rgba(254, 254, 91, 0.3);
+  border-style: solid;
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 17px 5px -9px rgba(254, 254, 91, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.glass-effect:hover {
+box-shadow: 5px 5px 20px 0px rgba(254, 254, 91, 0.3);
+}
 
 /* bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-insert
         hover:shadow-glass-sm */
 
 
-
-
-.glass-effect {
-  background-color: rgba(var(--background), 0.2);
-  border: 1px solid rgba(var(--accent), 0.3);
-  border-style: solid;
-  backdrop-filter: blur(6px);
-  box-shadow: var(--shadow-glass-insert);
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.glass-effect:hover {
-  box-shadow: var(--shadow-glass-sm);
-}
+        /* bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] */
