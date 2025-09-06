@@ -1,0 +1,283 @@
+/* ======  WRAPPER LOCAL  ====== */
+.backgroundWrapper {
+  position: fixed;
+  inset: 0;                 /* plein écran */
+  z-index: -1;              /* derrière le contenu */
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  /* on retire le body {} */
+}
+
+
+
+:root {
+    --primary-bg: #ffffff;
+    --gradient-start: #000000;
+    --gradient-mid: #030304;
+    --gradient-end: #000000;
+    --accent-color: #0066cc;
+    --text-color: #1a1a1a;
+}
+/* :root {
+    --primary-bg: #ffffff;
+    --gradient-start: #f0f8ff;
+    --gradient-mid: #e6f0ff;
+    --gradient-end: #d1e7ff;
+    --accent-color: #0066cc;
+    --text-color: #1a1a1a;
+} */
+
+/* *, */
+/* *::before, */
+/* *::after { */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+    /* font-family: 'DM Mono', monospace; */
+    /* color: var(--text-color); */
+    /* text-align: center; */
+/* } */
+
+/* body {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    height: 100vh;
+    overflow: hidden;
+} */
+
+/* h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--accent-color), #0099ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
+} */
+
+/* h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 300;
+} */
+
+.containerBackground {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBackground::before,
+.containerBackground::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -3;
+}
+
+.containerBackground::before {
+    right: 0;
+    bottom: -19;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 30rem;
+    background: linear-gradient(var(--gradient-start), var(--accent-color));
+    align-self: flex-end;
+    opacity: 0.5;
+    animation: gradient-fade 8s ease-in-out 3s infinite alternate;
+}
+
+@keyframes gradient-fade {
+    from {
+        transform: translate(10%, -10%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(50%, -50%) rotate(360deg);
+    }
+}
+
+.containerBackground::after {
+    top: 0;
+    left: 30;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
+    background: linear-gradient(var(--gradient-end), var(--accent-color));
+    opacity: 0.5;
+    animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
+}
+
+@keyframes gradient-fade-alt {
+    from {
+        transform: translate(-20%, 20%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-60%, 60%) rotate(360deg);
+    }
+}
+
+.text-zone {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+}
+
+.text-zone::before,
+.text-zone::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.text-zone::before {
+    z-index: -1;
+    top: 3rem;
+    right: -10rem;
+    width: 13rem;
+    height: 13rem;
+    opacity: 0.5;
+    border-radius: 13rem;
+    background: linear-gradient(var(--gradient-start), var(--accent-color));
+    animation: rotation 7s linear infinite;
+}
+
+.text-zone::after {
+    z-index: -1;
+    bottom: -15rem;
+    left: -10rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20rem;
+    background: linear-gradient(var(--gradient-end), var(--accent-color));
+    opacity: 0.5;
+    animation: rotation 7s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.arrow {
+    z-index: 1000;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.geo-arrow {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.arrow-left {
+    top: 0;
+    left: -7rem;
+}
+
+.arrow-right {
+    bottom: 0;
+    right: 4rem;
+}
+
+.dotted-circle {
+    position: absolute;
+    top: -5rem;
+    right: -5rem;
+    opacity: 0.5;
+    animation: rotation 38s linear infinite;
+}
+
+.draw-in {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 10;
+    animation: draw 5s ease-in-out alternate infinite;
+    stroke: var(--accent-color);
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.item-to {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+}
+
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

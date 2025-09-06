@@ -2,11 +2,14 @@
 "use client"
 import { Github, Home, Linkedin, NotebookText, Palette, Phone, Twitter, User } from "lucide-react"
 import Link from "next/link"
-import type React from "react"
+// import type React from "react"
 import clsx from "clsx"
 import { motion } from "framer-motion";
 import type { JSX } from "react/jsx-runtime"
 import ResponsiveComponent from "../ResponsiveComponent"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 type IconType = "home" | "about" | "projects" | "contact" | "github" | "linkedin" | "twitter" | "resume"
 
@@ -51,11 +54,18 @@ const item = {
 const NavLink = motion(Link)
 
 const NavButton: React.FC<NavButtonProps> = ({ x, y, label, link, icon, newTab, labelDirection = "right" }) => {
+  
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Durée des animations en millisecondes
+        //   once: true,    // Pour que l'animation se joue une seule fois
+      });
+    }, []);
   return (
     <ResponsiveComponent>
       {({ size }) => {
         return size.width >= 480 ? (
-          <div className="absolute cursor-pointer z-50" style={{ transform: `translate(${x}, ${y})` }}>
+          <div className="absolute cursor-pointer z-50" style={{ transform: `translate(${x}, ${y})` }} data-aos="flip-right">
             <NavLink
               variants={item}
               href={link}

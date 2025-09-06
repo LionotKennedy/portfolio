@@ -1,0 +1,117 @@
+/* 1. VARIABLES LOCALES (pas de :root) */
+.backgroundWrapper {
+  --bg-start: #0d0e0f;
+  --bg-mid: #0f0f10;
+  --bg-end: #0e0f0f;
+  --accent: #0066cc;
+  --txt: #1a1a1a;
+}
+/* .backgroundWrapper {
+  --bg-start: #f0f8ff;
+  --bg-mid: #e6f0ff;
+  --bg-end: #d1e7ff;
+  --accent: #0066cc;
+  --txt: #1a1a1a;
+} */
+
+/* 2. RESET LOCAL – uniquement dans l’arbre .backgroundWrapper */
+.backgroundWrapper,
+.backgroundWrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. TYPO & COULEUR – uniquement dedans */
+.backgroundWrapper {
+  font-family: 'DM Mono', monospace;
+  color: var(--txt);
+  text-align: center;
+}
+
+/* 4. FOND & POSITION */
+.backgroundWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
+}
+
+/* 5. CONTENEUR INTERNE */
+.backgroundWrapper .containerBackground {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 6. CERCLE POINTILLÉ */
+.backgroundWrapper .dotted-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(180px, 50vw, 352px);
+  height: clamp(180px, 50vw, 352px);
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  animation: rotation 38s linear infinite;
+}
+
+/* 7. FLÈCHES */
+.backgroundWrapper .arrow {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.7;
+}
+.backgroundWrapper .arrow-left  { top: 0; left: clamp(-4rem, -6vw, -7rem); }
+.backgroundWrapper .arrow-right { bottom: 0; right: clamp(1rem, 4vw, 4rem); }
+
+.backgroundWrapper .geo-arrow {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+/* 8. ANIMATIONS */
+.backgroundWrapper .draw-in {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 10;
+  animation: draw 5s ease-in-out alternate infinite;
+  stroke: var(--accent);
+}
+.backgroundWrapper .item-to {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.backgroundWrapper .bounce-1 { animation-name: bounce-1; animation-timing-function: ease; }
+.backgroundWrapper .bounce-2 { animation-name: bounce-2; animation-timing-function: ease; }
+.backgroundWrapper .bounce-3 { animation-name: bounce-3; animation-timing-function: ease; }
+
+/* 9. KEYFRAMES */
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes draw {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(50px); }
+  100% { transform: translateY(0); }
+}
+@keyframes bounce-2 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+@keyframes bounce-3 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}

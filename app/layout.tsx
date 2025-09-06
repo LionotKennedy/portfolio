@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
+// import "./globals2.css";
+// import "./globals3.css";
+// import "./globals4.css";
+import "./globals5.css";
+import "./components/style/index.css";
 import clsx from "clsx";
 import FireFliesBackground from "./components/FireFliesBackground";
 

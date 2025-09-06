@@ -3,6 +3,7 @@ import bg from "../../../public/background/contact-background.png";
 import type { Metadata } from "next";
 import type { JSX } from "react/jsx-runtime";
 import Form from "@/app/components/contact/Form";
+import BackgroundHome from "@/app/components/BackgroundHome";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -19,10 +20,13 @@ const Contact = (): JSX.Element => {
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
       />
 
+      <BackgroundHome />
+
       <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 space-y-8">
         <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
           <h1 className="text-accent font-semibold text-center text-4xl capitalize">
-            summon the wizard
+            {/* summon the wizard */}
+            Send a message
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
             Step into the circle of enchantment and weave your words into the
