@@ -1,64 +1,62 @@
 /* ======  WRAPPER LOCAL  ====== */
 .backgroundWrapper {
-  position: fixed;
-  inset: 0;                 /* plein écran */
-  z-index: -1;              /* derrière le contenu */
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
-  /* on retire le body {} */
+    position: fixed;
+    inset: 0;
+    /* plein écran */
+    z-index: -1;
+    /* derrière le contenu */
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    /* on retire le body {} */
 }
-
-
 
 :root {
-    --primary-bg: #ffffff;
-    --gradient-start: #000000;
-    --gradient-mid: #030304;
-    --gradient-end: #000000;
-    --accent-color: #0066cc;
-    --text-color: #1a1a1a;
-}
-/* :root {
     --primary-bg: #ffffff;
     --gradient-start: #f0f8ff;
     --gradient-mid: #e6f0ff;
     --gradient-end: #d1e7ff;
     --accent-color: #0066cc;
-    --text-color: #1a1a1a;
+    /* --accent-color: #ffcc00; */
+    --text-color: #000000;
+    --text-title-color: #232323;
+    --btn-contact: rgba(33, 125, 216, 0.371);
+}
+
+/* :root {
+    --primary-bg: #ffffff;
+    --accent-color: #ffcc00;
+    --gradient-start: #000000;
+    --gradient-mid: #030304;
+    --gradient-end: #000000;
+    --accent-color: #0066cc;
+    --text-color: #ffffff;
+    --text-title-color: #ffffff;
+    --btn-contact: rgb(35, 34, 34);
 } */
 
-/* *, */
-/* *::before, */
-/* *::after { */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* box-sizing: border-box; */
-    /* font-family: 'DM Mono', monospace; */
-    /* color: var(--text-color); */
-    /* text-align: center; */
-/* } */
+.bold-name {
+    font-weight: 700;
+}
 
-/* body {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
-    height: 100vh;
-    overflow: hidden;
-} */
+.text-title {
+    color: var( --text-title-color);
+}
 
-/* h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--accent-color), #0099ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
-} */
+.bg-background-btn-contact {
+    background-color: var(--btn-contact);
+}
 
-/* h2 {
-    font-size: 3rem;
+.text-content-change {
     color: var(--text-color);
-    font-weight: 300;
-} */
+}
+
+.text-btn-change {
+    color: var(--text-color);
+}
+
+.text-btn-change:hover {
+    color: var(--accent-color);
+}
 
 .containerBackground {
     height: 100vh;
@@ -281,3 +279,68 @@
         transform: translateY(0);
     }
 }
+
+
+
+
+
+
+
+
+/* *, */
+/* *::before, */
+/* *::after { */
+/* margin: 0; */
+/* padding: 0; */
+/* box-sizing: border-box; */
+/* font-family: 'DM Mono', monospace; */
+/* color: var(--text-color); */
+/* text-align: center; */
+/* } */
+
+/* body {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    height: 100vh;
+    overflow: hidden;
+} */
+
+/* h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--accent-color), #0099ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
+} */
+
+/* h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 300;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
+    --primary-bg: #ffffff;
+    --gradient-start: #000000;
+    --gradient-mid: #030304;
+    --gradient-end: #000000;
+    --accent-color: #0066cc;
+    --text-color: #1a1a1a;
+} */

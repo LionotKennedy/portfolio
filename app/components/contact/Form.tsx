@@ -116,7 +116,7 @@ const Form: React.FC = () => {
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 
-          glass-effect custom-btn"
+          glass-effect custom-btn text-content-change"
         />
         {errors.name && (
           <span className="inline-block self-start text-accent">
@@ -130,7 +130,7 @@ const Form: React.FC = () => {
           placeholder="email"
           {...register("email", { required: "This field is required!" })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
-          glass-effect custom-btn"
+          glass-effect custom-btn text-content-change"
         />
         {errors.email && (
           <span className="inline-block self-start text-accent">
@@ -153,7 +153,7 @@ const Form: React.FC = () => {
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
-          glass-effect custom-btn"
+          glass-effect custom-btn text-content-change"
         />
         {errors.message && (
           <span className="inline-block self-start text-accent">
@@ -166,7 +166,7 @@ const Form: React.FC = () => {
           value="Cast your message!"
           className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
       hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
-      custom-btn"
+      custom-btn text-content-change bg-background-btn-contact"
           type="submit"
         />
       </form>

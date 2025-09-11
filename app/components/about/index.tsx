@@ -19,7 +19,7 @@ const AboutDetails: React.FC = () => {
             3+ years of experience
           </div>
         </div> */}
-        <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full">
+        <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full text-content-change">
           <ItemLayout
             className={
               "col-span-full lg:col-span-8 row-span-2 flex-col items-start glass-effect custom-btn"

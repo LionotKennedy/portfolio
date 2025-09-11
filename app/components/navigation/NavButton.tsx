@@ -76,7 +76,7 @@ const NavButton: React.FC<NavButtonProps> = ({ x, y, label, link, icon, newTab, 
               prefetch={false}
               scroll={false}
             >
-              <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
+              <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent text-btn-change">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />

@@ -73,6 +73,9 @@
 .glass-effect:hover {
   box-shadow: 5px 5px 20px 0px rgba(254, 254, 91, 0.3);
 }
+.bg-background-btn-contact{
+  display: none;
+}
 
 /* bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-insert
         hover:shadow-glass-sm */

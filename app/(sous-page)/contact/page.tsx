@@ -1,5 +1,5 @@
-import Image from "next/image";
-import bg from "../../../public/background/contact-background.png";
+// import Image from "next/image";
+// import bg from "../../../public/background/contact-background.png";
 import type { Metadata } from "next";
 import type { JSX } from "react/jsx-runtime";
 import Form from "@/app/components/contact/Form";
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const Contact = (): JSX.Element => {
   return (
     <>
-      <Image
+      {/* <Image
         src={bg || "/placeholder.svg"}
         alt="Next.js Portfolio website's contact page background image"
         priority
         sizes="100vw"
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
-      />
+      /> */}
 
       <BackgroundHome />
 
@@ -28,7 +28,7 @@ const Contact = (): JSX.Element => {
             {/* summon the wizard */}
             Send a message
           </h1>
-          <p className="text-center font-light text-sm xs:text-base">
+          <p className="text-center font-light text-sm xs:text-base text-content-change">
             Step into the circle of enchantment and weave your words into the
             fabric of the cosmos. Whether you seek to conjure collaborations,
             unlock mysteries, or simply share tales of adventure, your messages

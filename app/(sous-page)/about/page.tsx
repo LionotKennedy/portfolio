@@ -530,16 +530,16 @@ export default function Home(): JSX.Element {
 
       {/* Votre nom avec animation */}
       <div className="text-center -mt-4 sm:-mt-6 md:-mt-8 z-20 px-4">
-        <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl text-foreground mx-auto">
+        <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl text-foreground mx-auto text-title bold-name">
           I'm RAZAFIMANDIMBY Lionot
         </h2>
         
         {/* Partie animée seulement - Taille de texte responsive optimisée */}
         <div className="animate-type overflow-hidden whitespace-nowrap border-r-4 border-r-accent pr-1 mx-auto w-fit max-w-[90vw] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[60vw] mt-2 sm:mt-3 md:mt-4">
           <span className="text-blue-500 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">Web </span>
-          <span className="text-foreground text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">, </span>
+          <span className="text-foreground text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-content-change">, </span>
           <span className="text-blue-400 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">Mobile </span>
-          <span className="text-foreground text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">and  </span>
+          <span className="text-foreground text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-content-change">and  </span>
           <span className="text-blue-400 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">Desktop </span>
           <span className="text-blue-400 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">Developer</span>
         </div>
@@ -559,7 +559,7 @@ export default function Home(): JSX.Element {
           <h1 className="font-bold text-6xl xs:text-7xl sm:text-8xl lg:text-9xl text-accent animate-fadeIn">
             CodeBucks
           </h1>
-          <p className="font-light text-foreground text-lg mt-2">
+          <p className="font-light text-foreground text-lg mt-2 text-content-change">
             Meet the wizard behind this portfolio
           </p>
         </div>
