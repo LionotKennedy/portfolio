@@ -49,38 +49,6 @@ const Form: React.FC = () => {
         id: toastId,
       }
     );
-
-    // Commented out EmailJS implementation
-    // emailjs
-    //   .send(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID!,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-    //     params,
-    //     {
-    //       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY!,
-    //       limitRate: {
-    //         throttle: 5000,
-    //       },
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       toast.success(
-    //         "I have received your message, I will get back to you soon!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     },
-    //     (error) => {
-    //       toast.error(
-    //         "There was an error sending your message, please try again later!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     }
-    //   );
   };
 
   const onSubmit = (data: FormData): void => {
@@ -98,9 +66,6 @@ const Form: React.FC = () => {
     <>
       <Toaster richColors={true} />
       <form
-        // variants={container}
-        // initial="hidden"
-        // animate="show"
         onSubmit={handleSubmit(onSubmit)}
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
       >
