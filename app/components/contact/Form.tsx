@@ -40,16 +40,38 @@ const Form: React.FC = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const sendEmail = (params: TemplateParams): void => {
-    const toastId = toast.loading("Sending your message, please wait...");
+  // const sendEmail = (params: TemplateParams): void => {
+  //   const toastId = toast.loading("Sending your message, please wait...");
 
-    toast.info(
-      "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
-      {
-        id: toastId,
-      }
-    );
-  };
+  //   toast.info(
+  //     "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
+  //     {
+  //       id: toastId,
+  //     }
+  //   );
+  // };
+
+  const sendEmail = async (params: TemplateParams) => {
+  const toastId = toast.loading('Sending your message…');
+
+  try {
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    params.from_name,
+        email:   params.reply_to,
+        message: params.message,
+      }),
+    });
+
+    if (!res.ok) throw new Error();
+
+    toast.success('Message sent! I’ll get back to you soon.', { id: toastId });
+  } catch {
+    toast.error('Something went wrong, please try again.', { id: toastId });
+  }
+};
 
   const onSubmit = (data: FormData): void => {
     const templateParams: TemplateParams = {
