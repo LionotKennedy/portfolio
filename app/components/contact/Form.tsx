@@ -37,19 +37,9 @@ const Form: React.FC = () => {
   const {
     register,
     handleSubmit,
+    reset,            // ← NEW
     formState: { errors },
   } = useForm<FormData>();
-
-  // const sendEmail = (params: TemplateParams): void => {
-  //   const toastId = toast.loading("Sending your message, please wait...");
-
-  //   toast.info(
-  //     "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
-  //     {
-  //       id: toastId,
-  //     }
-  //   );
-  // };
 
   const sendEmail = async (params: TemplateParams) => {
   const toastId = toast.loading('Sending your message…');
@@ -68,6 +58,7 @@ const Form: React.FC = () => {
     if (!res.ok) throw new Error();
 
     toast.success('Message sent! I’ll get back to you soon.', { id: toastId });
+    reset(); // ← NEW : vide le formulaire uniquement si succès
   } catch {
     toast.error('Something went wrong, please try again.', { id: toastId });
   }
@@ -89,6 +80,7 @@ const Form: React.FC = () => {
       <Toaster richColors={true} />
       <form
         onSubmit={handleSubmit(onSubmit)}
+        // onSubmit={handleSubmit(sendEmail)} // on passe directement data
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
       >
         <input
