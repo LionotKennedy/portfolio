@@ -1,0 +1,94 @@
+Objectif :  
+- virer toutes les balises `<img>` inline  
+- créer un composant unique `<DynamicSvg />` qui :  
+  – charge le SVG côté client (évite l’erreur « hydration mismatch » si l’URL contient des & qui deviennent &amp;)  
+  – se redimensionne tout seul (responsive)  
+  – accepte n’importe quelle URL, un `alt`, et éventuellement un wrapper cliquable (`<Link>`)  
+
+1. Le composant réutilisable  
+```tsx
+// components/DynamicSvg.tsx
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+type Props = {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+};
+
+const DynamicSvg: React.FC<Props> = ({ src, alt, className = "", priority = false }) => {
+  const [svg, setSvg] = useState<string>("");
+
+  useEffect(() => {
+    fetch(src)
+      .then((r) => r.text())
+      .then(setSvg)
+      .catch(() => setSvg("")); // en cas d’erreur on render rien
+  }, [src]);
+
+  if (!svg) return null; // ou un skeleton si tu veux
+
+  return (
+    <div
+      className={`relative w-full h-auto ${className}`}
+      dangerouslySetInnerHTML={{ __html: svg }}
+      role="img"
+      aria-label={alt}
+    />
+  );
+};
+
+export default DynamicSvg;
+```
+
+2. Utilisation dans `AboutDetails` (on remplace **chaque** `<img>`)  
+```tsx
+import DynamicSvg from "@/components/DynamicSvg";
+
+{/* exemple 1 : simple */}
+<ItemLayout className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}>
+  <DynamicSvg
+    src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
+    alt="Top languages"
+  />
+</ItemLayout>
+
+{/* exemple 2 : enveloppé dans un lien */}
+<ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+  <Link
+    href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
+    target="_blank"
+    className="block w-full"
+  >
+    <DynamicSvg
+      src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=codebucks27&repo=Nextjs-contentlayer-blog&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`}
+      alt="Pinned repo"
+    />
+  </Link>
+</ItemLayout>
+```
+
+3. Responsive ?  
+Le SVG injecté hérite du conteneur parent (Tailwind : `w-full h-auto`).  
+Si tu veux une hauteur max :
+
+```tsx
+<ItemLayout className={"col-span-full md:col-span-6 !p-0 max-h-64 md:max-h-80"}>
+  <DynamicSvg … className="max-w-full max-h-full object-contain" />
+</ItemLayout>
+```
+
+4. Bonus accessibilité  
+Le rôle `img` + `aria-label` sur le `<div>` garantit que le SVG est lu comme image par les lecteurs d’écran.
+
+Tu peux maintenant supprimer **toutes** les balises `<img>` de la page ; chaque appel devient une ligne :
+
+```tsx
+<DynamicSvg src="…" alt="…" />
+```
+
+Et ton composant est réutilisable partout dans le projet.
