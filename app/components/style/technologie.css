@@ -1,0 +1,25 @@
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(30, 30, 40, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 254, 91, 0.15);
+}
+
+/* Animation pour les icônes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.group:hover .float-animation {
+  animation: float 2s ease-in-out infinite;
+}
