@@ -1,7 +1,8 @@
 Objectif :  
 - virer toutes les balises `<img>` inline  
 - créer un composant unique `<DynamicSvg />` qui :  
-  – charge le SVG côté client (évite l’erreur « hydration mismatch » si l’URL contient des & qui deviennent &amp;)  
+  – charge le SVG côté client (évite l’erreur « hydration mismatch » 
+  si l’URL contient des & qui deviennent &amp;)  
   – se redimensionne tout seul (responsive)  
   – accepte n’importe quelle URL, un `alt`, et éventuellement un wrapper cliquable (`<Link>`)  
 
@@ -83,7 +84,8 @@ Si tu veux une hauteur max :
 ```
 
 4. Bonus accessibilité  
-Le rôle `img` + `aria-label` sur le `<div>` garantit que le SVG est lu comme image par les lecteurs d’écran.
+Le rôle `img` + `aria-label` sur le `<div>` garantit que le SVG est lu comme image par 
+les lecteurs d’écran.
 
 Tu peux maintenant supprimer **toutes** les balises `<img>` de la page ; chaque appel devient une ligne :
 

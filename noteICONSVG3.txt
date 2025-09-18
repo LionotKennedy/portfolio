@@ -1,6 +1,7 @@
 # Solution: Création d'un composant SVG unifié avec données externes
 
-Je vais vous aider à créer un système où tous les SVG sont gérés dans un fichier de données séparé et importés dans un composant unique.
+Je vais vous aider à créer un système où tous les SVG sont gérés dans un fichier de données séparé et
+ importés dans un composant unique.
 
 ## Étape 1: Création du fichier de données SVG
 

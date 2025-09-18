@@ -153,4 +153,4 @@ Le composant `<Image>` se charge du reste.
 Résultat :  
 - Un seul fichier de données pour toutes les images  
 - Un seul composant d’affichage  
-- Responsive, lazy-loaded, et prêt pour du SVG local ou distant.
+- Responsive, lazy-loaded, et prêt pour du SVG local ou distant. 

@@ -1,3 +1,5 @@
+import { svgData } from "@/app/data/svgData";
+import SvgDisplay from "../SvgDisplay";
 import ItemLayout from "./ItemLayout";
 import Link from "next/link";
 
@@ -80,6 +82,19 @@ const AboutDetails: React.FC = () => {
               alt="CodeBucks2"
               loading="lazy"
             />
+          </ItemLayout>
+          <ItemLayout
+            className={
+              "col-span-full lg:col-span-12 row-span-2 flex-col items-start glass-effect custom-btn"
+            }
+          >
+            {/* <div className="flex-col items-start glass-effect lg:col-span-12"> */}
+          {svgData.map((s) => (
+            <ItemLayout key={s.id} className={s.cols}>
+              <SvgDisplay data={s} />
+            </ItemLayout>
+          ))}
+            {/* </div> */}
           </ItemLayout>
 
           <ItemLayout className={"col-span-full"}>
