@@ -13,27 +13,34 @@ const SvgDisplay: React.FC<Props> = ({ data }) => {
 
   /* -------- single SVG -------- */
   const content = (
+    // <Image
+    // src={data.src as string }
+    //   alt={data.alt}
+    //   width={800}
+    //   height={400}
+    //   className="w-full h-auto"
+    //   loading="lazy"
+    // />
     <Image
-    //   src={TestSVG}
-    //   alt='Coucou'
-    src={data.src as string }
+      src={data.src as string}
       alt={data.alt}
-      width={800}
-      height={400}
-      className="w-full h-auto"
+      width={64}
+      height={64}
+      className="w-full h-auto object-contain"
       loading="lazy"
+      sizes="(max-width: 640px) 40px, (max-width: 768px) 50px, 64px"
     />
   );
 
   return (
     <>
-    {/* <Link href={data.link} target={data.target} className="block w-full"> */}
-    <div className="inline w-full">
-      {content}
-    </div>
-    {/* </Link> */}
+      {/* <Link href={data.link} target={data.target} className="block w-full"> */}
+      <div className="inline w-full">
+        {content}
+      </div>
+      {/* </Link> */}
     </>
-  ) 
+  )
 };
 
 export default SvgDisplay;
@@ -43,6 +50,28 @@ export default SvgDisplay;
 
 
 
+
+// "use client";
+// import Image from "next/image";
+
+// type Props = { data: import("../data/svgData").SvgPack };
+
+// const SvgDisplay: React.FC<Props> = ({ data }) => {
+//   return (
+//     <div className="inline-block w-full h-full flex items-center justify-center">
+//       <Image
+//         src={data.src as string}
+//         alt={data.alt}
+//         width={40} // Taille de base réduite
+//         height={40}
+//         className="w-3/4 h-3/4 object-contain max-w-[50px] max-h-[50px]"
+//         loading="lazy"
+//       />
+//     </div>
+//   );
+// };
+
+// export default SvgDisplay;
 
 
 

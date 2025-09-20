@@ -73,11 +73,22 @@ const AboutDetails: React.FC = () => {
               </h3>
               <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 xs:gap-4 md:gap-5 w-full">
                 {svgData.map((s) => (
+                  // <div
+                  //   key={s.id}
+                  //   className="flex flex-col items-center justify-center p-2 xs:p-3 rounded-lg bg-background/10 border border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105 hover:bg-background/20 group"
+                  // >
                   <div
                     key={s.id}
-                    className="flex flex-col items-center justify-center p-2 xs:p-3 rounded-lg bg-background/10 border border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105 hover:bg-background/20 group"
+                    className="flex flex-col items-center justify-center p-2 xs:p-3 rounded-lg 
+             bg-white/10 dark:bg-black/10 
+             border border-white/20 dark:border-accent/20 
+             backdrop-blur-md 
+             hover:border-accent/50 
+             hover:bg-white/20 dark:hover:bg-black/20 
+             transition-all duration-300 hover:scale-105 group"
                   >
-                    <div className="relative w-full h-0 pb-[100%]">
+                    {/* <div className="relative w-full h-0 pb-[100%]"> */}
+                    <div className="relative w-full max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] h-0 pb-[100%] mx-auto">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <SvgDisplay data={s} />
                       </div>
@@ -90,6 +101,7 @@ const AboutDetails: React.FC = () => {
               </div>
             </div>
           </ItemLayout>
+
           <ItemLayout className={"col-span-full md:col-span-6 !p-0 glass-effect"}>
             <img
               className="w-full h-auto"
@@ -100,7 +112,7 @@ const AboutDetails: React.FC = () => {
           </ItemLayout>
           <ItemLayout className={"col-span-full md:col-span-6 !p-0 glass-effect"}>
             <Link
-              href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
+              href="https://github.com/LionotKennedy/portfolio"
               target="_blank"
               className="w-full"
             >
@@ -119,3 +131,42 @@ const AboutDetails: React.FC = () => {
 };
 
 export default AboutDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//              <ItemLayout className={"col-span-full"}>
+//   <div className="w-full">
+//     <h3 className="text-xl md:text-2xl mb-6 text-left w-full capitalize text-accent">
+//       Technologies & Tools
+//     </h3>
+//     <div className="grid grid-cols-4 xs:grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-10 gap-2 xs:gap-3 sm:gap-4 w-full">
+//       {svgData.map((s) => (
+//         <div
+//           key={s.id}
+//           className="flex flex-col items-center justify-center p-1 xs:p-2 sm:p-3 rounded-lg bg-background/10 border border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105 hover:bg-background/20 group"
+//         >
+//           <div className="relative w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+//             <SvgDisplay data={s} />
+//           </div>
+//           <p className="mt-1 xs:mt-2 text-xs text-center opacity-70 group-hover:opacity-100 transition-opacity truncate w-full px-1">
+//             {s.alt.replace('Pinned repo', '').replace('Top languages', '').replace('GitHub stats', '').replace('GitHub streak', '').trim() || s.id}
+//           </p>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// </ItemLayout>
