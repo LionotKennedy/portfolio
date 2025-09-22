@@ -106,13 +106,10 @@ const NavButton: React.FC<NavButtonProps> = ({ x, y, label, link, icon, newTab, 
 
                 <span
                   className={clsx(
-                    // "absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap border z-50",
-                    // "absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap",
-                    "absolute hidden peer-hover:block px-2 py-1 top-1/2 -translate-y-1/2 bg-popover text-popover-foreground text-sm rounded-md shadow-lg whitespace-nowrap",
-                    // labelDirection === "left" ? "right-full left-auto" : "",
-                    labelDirection === "left" 
-                      ? "right-full mr-2" 
-                      : "left-full ml-2" 
+                    "absolute hidden peer-hover:block px-2 py-1 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap",
+                    labelDirection === "left"
+                      ? "right-full mr-2"
+                      : "left-full ml-2"
                   )}
                 >
                   {label}
