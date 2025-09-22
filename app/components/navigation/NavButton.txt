@@ -1,0 +1,454 @@
+// "use client"
+// import { Github, Home, Linkedin, NotebookText, Palette, Phone, Twitter, User } from "lucide-react"
+// import Link from "next/link"
+// import clsx from "clsx"
+// import { motion } from "framer-motion";
+// import type { JSX } from "react/jsx-runtime"
+// import ResponsiveComponent from "../ResponsiveComponent"
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
+// import { useEffect } from 'react';
+
+// type IconType = "home" | "about" | "projects" | "contact" | "github" | "linkedin" | "twitter" | "resume"
+
+// interface NavButtonProps {
+//   x: string | number
+//   y: string | number
+//   label: string
+//   link: string
+//   icon: IconType | string
+//   newTab?: boolean
+//   labelDirection?: "left" | "right"
+// }
+
+// const getIcon = (icon: IconType): JSX.Element => {
+//   switch (icon) {
+//     case "home":
+//       return <Home className="w-full h-auto" strokeWidth={1.5} />
+//     case "about":
+//       return <User className="w-full h-auto" strokeWidth={1.5} />
+//     case "projects":
+//       return <Palette className="w-full h-auto" strokeWidth={1.5} />
+//     case "contact":
+//       return <Phone className="w-full h-auto" strokeWidth={1.5} />
+//     case "github":
+//       return <Github className="w-full h-auto" strokeWidth={1.5} />
+//     case "linkedin":
+//       return <Linkedin className="w-full h-auto" strokeWidth={1.5} />
+//     case "twitter":
+//       return <Twitter className="w-full h-auto" strokeWidth={1.5} />
+//     case "resume":
+//       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />
+//     default:
+//       return <Home className="w-full h-auto" strokeWidth={1.5} />
+//   }
+// }
+
+// const item = {
+//   hidden: { scale: 0 },
+//   show: { scale: 1 },
+// }
+
+// const NavLink = motion(Link)
+
+// const NavButton: React.FC<NavButtonProps> = ({ x, y, label, link, icon, newTab, labelDirection = "right" }) => {
+
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 1000,
+//     });
+//   }, []);
+  
+//   return (
+//     <ResponsiveComponent>
+//       {({ size }) => {
+//         return size.width >= 480 ? (
+//           <div className="absolute cursor-pointer z-50" style={{ transform: `translate(${x}, ${y})` }} data-aos="flip-right">
+//             <NavLink
+//               variants={item}
+//               href={link}
+//               target={newTab ? "_blank" : "_self"}
+//               className="text-foreground rounded-full flex items-center justify-center custom-btn glass-effect"
+//               aria-label={label}
+//               prefetch={false}
+//               scroll={false}
+//             >
+//               <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent text-btn-change">
+//                 {getIcon(icon as IconType)}
+//                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
+//                 <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap">
+//                   {label}
+//                 </span>
+//               </span>
+//             </NavLink>
+//           </div>
+//         ) : (
+//           <div className="w-full cursor-pointer z-50">
+//             <NavLink
+//               variants={item}
+//               href={link}
+//               target={newTab ? "_blank" : "_self"}
+//               className={clsx(
+//                 "text-foreground rounded-full flex items-center custom-btn glass-effect",
+//                 labelDirection === "left" ? "flex-row-reverse" : "flex-row"
+//               )}
+//               aria-label={label}
+//               prefetch={false}
+//               scroll={false}
+//             >
+//               <span className="relative w-10 h-10 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent text-btn-change flex-shrink-0">
+//                 {getIcon(icon as IconType)}
+//               </span>
+              
+//               <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
+              
+//               <span className={clsx(
+//                 "px-3 py-2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap",
+//                 "hidden peer-hover:block absolute top-1/2 -translate-y-1/2",
+//                 labelDirection === "left" 
+//                   ? "right-full mr-2 left-auto" 
+//                   : "left-full ml-2"
+//               )}>
+//                 {label}
+//               </span>
+//             </NavLink>
+//           </div>
+//         )
+//       }}
+//     </ResponsiveComponent>
+//   )
+// }
+
+// export default NavButton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import React from "react";
+// import { BtnList } from "@/app/data/data";
+// import NavButton from "./NavButton";
+// import "./navbutton.css";
+// import ResponsiveComponent from "../ResponsiveComponent";
+// import useScreenSize from "../hooks/useScreenSize";
+// import { motion } from "framer-motion";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import { useEffect } from "react";
+
+// const container = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.3,
+//     },
+//   },
+// };
+
+// const Navigation: React.FC = () => {
+//   const angleIncrement = 360 / BtnList.length;
+//   const size = useScreenSize();
+//   const isLarge = 1024;
+//   const isMedium = 768;
+
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 1000,
+//     });
+//   }, []);
+
+//   return (
+//     <div className="w-full fixed h-screen flex items-center justify-center">
+//       <ResponsiveComponent>
+//         {({ size }) => {
+//           return size.width >= 480 ? (
+//             <motion.div
+//               variants={container}
+//               initial="hidden"
+//               animate="show"
+//               className="w-max flex items-center justify-center relative hover:pause animate-spin-slow group"
+//             >
+//               {BtnList.map((btn, index) => {
+//                 const angleRad = (index * angleIncrement * Math.PI) / 180;
+//                 const radius = isLarge
+//                   ? "calc(20vw - 1rem)"
+//                   : isMedium
+//                   ? "calc(30vw - 1rem)"
+//                   : "calc(40vw - 1rem)";
+//                 const x = `calc(${radius} * ${Math.cos(angleRad)})`;
+//                 const y = `calc(${radius} * ${Math.sin(angleRad)})`;
+//                 return <NavButton key={btn.label} x={x} y={y} {...btn} />;
+//               })}
+//             </motion.div>
+//           ) : (
+//             <motion.div
+//               variants={container}
+//               initial="hidden"
+//               animate="show"
+//               className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-start xs:items-center justify-center relative group"
+//             >
+//               {BtnList.map((btn) => (
+//                 <NavButton key={btn.label} x={0} y={0} {...btn} labelDirection="left" />
+//               ))}
+//             </motion.div>
+//           );
+//         }}
+//       </ResponsiveComponent>
+//     </div>
+//   );
+// };
+
+// export default Navigation;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { Github, Home, Linkedin, NotebookText, Palette, Phone, Twitter, User } from "lucide-react";
+// import Link from "next/link";
+// import clsx from "clsx";
+// import { motion } from "framer-motion";
+// import type { JSX } from "react/jsx-runtime";
+// import ResponsiveComponent from "../ResponsiveComponent";
+
+// type IconType = "home" | "about" | "projects" | "contact" | "github" | "linkedin" | "twitter" | "resume"
+
+// interface NavButtonProps {
+//   x: string | number;
+//   y: string | number;
+//   label: string;
+//   link: string;
+//   icon: IconType | string;
+//   newTab?: boolean;
+//   labelDirection?: "left" | "right";
+// }
+
+// const getIcon = (icon: IconType): JSX.Element => {
+//   switch (icon) {
+//     case "home":
+//       return <Home className="w-full h-auto" strokeWidth={1.5} />;
+//     case "about":
+//       return <User className="w-full h-auto" strokeWidth={1.5} />;
+//     case "projects":
+//       return <Palette className="w-full h-auto" strokeWidth={1.5} />;
+//     case "contact":
+//       return <Phone className="w-full h-auto" strokeWidth={1.5} />;
+//     case "github":
+//       return <Github className="w-full h-auto" strokeWidth={1.5} />;
+//     case "linkedin":
+//       return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
+//     case "twitter":
+//       return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
+//     case "resume":
+//       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
+//     default:
+//       return <Home className="w-full h-auto" strokeWidth={1.5} />;
+//   }
+// };
+
+// const item = {
+//   hidden: { scale: 0 },
+//   show: { scale: 1 },
+// };
+
+// const NavLink = motion(Link);
+
+// const NavButton: React.FC<NavButtonProps> = ({ 
+//   x, 
+//   y, 
+//   label, 
+//   link, 
+//   icon, 
+//   newTab, 
+//   labelDirection = "right" 
+// }) => {
+//   const isExternalLink = newTab || link.startsWith('http');
+
+//   const linkProps = isExternalLink 
+//     ? { as: "a", href: link, target: "_blank", rel: "noopener noreferrer" }
+//     : { to: link };
+
+//   return (
+//     <ResponsiveComponent>
+//       {({ size }) => {
+//         return size.width >= 480 ? (
+//           <div 
+//             className="absolute cursor-pointer z-50" 
+//             style={{ transform: `translate(${x}, ${y})` }}
+//           >
+//             <NavLink
+//               variants={item}
+//               {...linkProps}
+//               className="text-foreground rounded-full flex items-center justify-center nav-btn glass-effect group"
+//               aria-label={label}
+//             >
+//               <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent transition-colors">
+//                 {getIcon(icon as IconType)}
+
+//                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
+
+//                 <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-popover text-popover-foreground text-sm rounded-md shadow-lg whitespace-nowrap border z-50">
+//                   {label}
+//                 </span>
+//               </span>
+//             </NavLink>
+//           </div>
+//         ) : (
+//           <div className="w-fit cursor-pointer z-50">
+//             <NavLink
+//               variants={item}
+//               {...linkProps}
+//               className="text-foreground rounded-full flex items-center justify-center nav-btn glass-effect group"
+//               aria-label={label}
+//             >
+//               <span className="relative w-10 h-10 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent transition-colors">
+//                 {getIcon(icon as IconType)}
+
+//                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
+
+//                 <span
+//                   className={clsx(
+//                     "absolute hidden peer-hover:block px-2 py-1 top-1/2 -translate-y-1/2 bg-popover text-popover-foreground text-sm rounded-md shadow-lg whitespace-nowrap border z-50",
+//                     labelDirection === "left" 
+//                       ? "right-full mr-2" 
+//                       : "left-full ml-2"
+//                   )}
+//                 >
+//                   {label}
+//                 </span>
+//               </span>
+//             </NavLink>
+//           </div>
+//         );
+//       }}
+//     </ResponsiveComponent>
+//   );
+// };
+
+// export default NavButton;

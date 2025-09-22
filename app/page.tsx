@@ -1,7 +1,7 @@
 // import styles from "./page.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 // import bg from "../public/background/home-background.png";
-import bg from "../public/profile311.jpg";
+// import bg from "../public/profile311.jpg";
 import Navigation from "./components/navigation";
 import BackgroundHome from "./components/BackgroundHome";
 import "./components/style/page.css"
