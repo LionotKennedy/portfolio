@@ -1,0 +1,31 @@
+
+  // {
+  //   id: "Typescript",
+  //   type: "single",
+  //   src: imageSVG35,
+  //   alt: "Typescript",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+
+  // {
+  //   id: "Notion",
+  //   type: "single",
+  //   src: imageSVG31,
+  //   alt: "Notion",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "pinned-repo",
+  //   type: "single",
+  //   src: imageSVG37,
+  //   alt: "Pinned repo",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+
+  //   {
+  //     id: "pinned-repo",
+  //     type: "single",
+  //     src: imageSVG2,
+  //     alt: "Pinned repo",
+  //     cols: "col-span-full md:col-span-6 !p-0",
+  //   },
