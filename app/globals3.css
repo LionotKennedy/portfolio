@@ -86,3 +86,6 @@
   animation: scale-in 0.4s ease-out;
 }
 
+.text-error {
+  color: #ef4444; /* rouge Tailwind 500 */
+}

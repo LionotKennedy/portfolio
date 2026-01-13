@@ -42,27 +42,27 @@ const Form: React.FC = () => {
   } = useForm<FormData>();
 
   const sendEmail = async (params: TemplateParams) => {
-  const toastId = toast.loading('Sending your message…');
+    const toastId = toast.loading('Sending your message…');
 
-  try {
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name:    params.from_name,
-        email:   params.reply_to,
-        message: params.message,
-      }),
-    });
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: params.from_name,
+          email: params.reply_to,
+          message: params.message,
+        }),
+      });
 
-    if (!res.ok) throw new Error();
+      if (!res.ok) throw new Error();
 
-    toast.success('Message sent! I’ll get back to you soon.', { id: toastId });
-    reset(); // ← NEW : vide le formulaire uniquement si succès
-  } catch {
-    toast.error('Something went wrong, please try again.', { id: toastId });
-  }
-};
+      toast.success('Message sent! I’ll get back to you soon.', { id: toastId });
+      reset(); // ← NEW : vide le formulaire uniquement si succès
+    } catch {
+      toast.error('Something went wrong, please try again.', { id: toastId });
+    }
+  };
 
   const onSubmit = (data: FormData): void => {
     const templateParams: TemplateParams = {
@@ -98,7 +98,7 @@ const Form: React.FC = () => {
           glass-effect custom-btn text-content-change"
         />
         {errors.name && (
-          <span className="inline-block self-start text-accent">
+          <span className="inline-block self-start text-red-500">
             {errors.name.message}
           </span>
         )}
@@ -112,7 +112,7 @@ const Form: React.FC = () => {
           glass-effect custom-btn text-content-change"
         />
         {errors.email && (
-          <span className="inline-block self-start text-accent">
+          <span className="inline-block self-start text-red-500">
             {errors.email.message}
           </span>
         )}
@@ -135,14 +135,15 @@ const Form: React.FC = () => {
           glass-effect custom-btn text-content-change"
         />
         {errors.message && (
-          <span className="inline-block self-start text-accent">
+          <span className="inline-block self-start text-red-500">
             {errors.message.message}
           </span>
         )}
 
         <input
           //   variants={item}
-          value="Cast your message!"
+          // value="Cast your message!"
+          value=" Projette ton message ! "
           className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
       hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
       custom-btn text-content-change bg-background-btn-contact"
