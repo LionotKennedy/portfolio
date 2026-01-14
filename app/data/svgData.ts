@@ -9,13 +9,13 @@ import imageSVG8 from "../../public/icons/CS.svg";
 import imageSVG9 from "../../public/icons/Java-Light.svg";
 import imageSVG10 from "../../public/icons/Python-Light.svg";
 // Fisrt
-import imageSVG11 from "../../public/icons/Anaconda-Light.svg";
-import imageSVG12 from "../../public/icons/AndroidStudio-Light.svg";
+// import imageSVG11 from "../../public/icons/Anaconda-Light.svg";
+// import imageSVG12 from "../../public/icons/AndroidStudio-Light.svg";
 import imageSVG13 from "../../public/icons/Bash-Light.svg";
 import imageSVG14 from "../../public/icons/Bootstrap.svg";
 import imageSVG15 from "../../public/icons/Dart-Light.svg";
 import imageSVG16 from "../../public/icons/Django.svg";
-import imageSVG17 from "../../public/icons/Eclipse-Light.svg";
+// import imageSVG17 from "../../public/icons/Eclipse-Light.svg";
 import imageSVG18 from "../../public/icons/Electron.svg";
 import imageSVG19 from "../../public/icons/ExpressJS-Light.svg";
 import imageSVG20 from "../../public/icons/FastAPI.svg";
@@ -23,7 +23,7 @@ import imageSVG20 from "../../public/icons/FastAPI.svg";
 import imageSVG21 from "../../public/icons/Flutter-Light.svg";
 import imageSVG22 from "../../public/icons/Git.svg";
 import imageSVG23 from "../../public/icons/Github-Light.svg";
-import imageSVG24 from "../../public/icons/GraphQL-Light.svg";
+// import imageSVG24 from "../../public/icons/GraphQL-Light.svg";
 import imageSVG25 from "../../public/icons/Hibernate-Light.svg";
 import imageSVG26 from "../../public/icons/Laravel-Light.svg";
 import imageSVG27 from "../../public/icons/MongoDB.svg";
@@ -37,8 +37,8 @@ import imageSVG33 from "../../public/icons/PHP-Light.svg";
 import imageSVG34 from "../../public/icons/PostgreSQL-Light.svg";
 // import imageSVG35 from "../../public/icons/Python-Light.svg";
 import imageSVG36 from "../../public/icons/React-Dark.svg";
-import imageSVG37 from "../../public/icons/VSCode-Light.svg";
-import imageSVG38 from "../../public/icons/Vite-Light.svg";
+// import imageSVG37 from "../../public/icons/VSCode-Light.svg";
+// import imageSVG38 from "../../public/icons/Vite-Light.svg";
 import imageSVG39 from "../../public/icons/TypeScript.svg";
 import imageSVG40 from "../../public/icons/Wordpress.svg";
 
@@ -228,20 +228,20 @@ export const svgData: SvgPack[] = [
     alt: "Wordpress",
     cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
   },
-  {
-    id: "Vite",
-    type: "single",
-    src: imageSVG38,
-    alt: "Vite",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
-  {
-    id: "GraphQL",
-    type: "single",
-    src: imageSVG24,
-    alt: "GraphQL",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
+  // {
+  //   id: "Vite",
+  //   type: "single",
+  //   src: imageSVG38,
+  //   alt: "Vite",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "GraphQL",
+  //   type: "single",
+  //   src: imageSVG24,
+  //   alt: "GraphQL",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
   {
     id: "MongoDB",
     type: "single",
@@ -263,34 +263,34 @@ export const svgData: SvgPack[] = [
     alt: "MySQL",
     cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
   },
-  {
-    id: "VSCode",
-    type: "single",
-    src: imageSVG37,
-    alt: "VSCode",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
-  {
-    id: "Anaconda",
-    type: "single",
-    src: imageSVG11,
-    alt: "Anaconda",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
-  {
-    id: "Android",
-    type: "single",
-    src: imageSVG12,
-    alt: "Android",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
-  {
-    id: "Eclipse",
-    type: "single",
-    src: imageSVG17,
-    alt: "Eclipse",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
+  // {
+  //   id: "VSCode",
+  //   type: "single",
+  //   src: imageSVG37,
+  //   alt: "VSCode",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "Anaconda",
+  //   type: "single",
+  //   src: imageSVG11,
+  //   alt: "Anaconda",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "Android",
+  //   type: "single",
+  //   src: imageSVG12,
+  //   alt: "Android",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "Eclipse",
+  //   type: "single",
+  //   src: imageSVG17,
+  //   alt: "Eclipse",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
   {
     id: "GIT",
     type: "single",
@@ -305,18 +305,18 @@ export const svgData: SvgPack[] = [
     alt: "Github",
     cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
   },
-  {
-    id: "npm",
-    type: "single",
-    src: imageSVG32,
-    alt: "npm",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
-  {
-    id: "Bash",
-    type: "single",
-    src: imageSVG13,
-    alt: "Bash",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
+  // {
+  //   id: "npm",
+  //   type: "single",
+  //   src: imageSVG32,
+  //   alt: "npm",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
+  // {
+  //   id: "Bash",
+  //   type: "single",
+  //   src: imageSVG13,
+  //   alt: "Bash",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
 ];

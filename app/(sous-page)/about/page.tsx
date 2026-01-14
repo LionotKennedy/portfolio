@@ -36,10 +36,14 @@ export default function Home(): JSX.Element {
       <div className="relative w-full h-[40vh] flex flex-col items-center justify-center">
         <div className="text-center">
           <h1 className="font-bold text-6xl xs:text-7xl sm:text-8xl lg:text-9xl text-accent animate-fadeIn">
-            About me
+            {/* About me */}
+            À propos de moi 
           </h1>
           <p className="font-light text-foreground text-lg mt-2 text-content-change">
-            Meet the wizard behind this portfolio
+            {/* Meet the wizard behind this portfolio */}
+            {/* À la rencontre du créateur de ce portfolio  */}
+            {/* Faites connaissance avec l’esprit créatif derrière ce portfolio */}
+            Découvrez l’artisan de ce portfolio
           </p>
         </div>
       </div>
