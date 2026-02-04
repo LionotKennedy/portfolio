@@ -669,10 +669,10 @@
 import { svgData } from "@/app/data/svgData";
 import SvgDisplay from "../SvgDisplay";
 import ItemLayout from "./ItemLayout";
-// import Link from "next/link";
-import GitHubTopLangsCard from "../github-stats/GitHubTopLangsCard";
-import GitHubStatsCard from "../github-stats/GitHubStatsCard";
-import GitHubStreakCard from "../github-stats/GitHubStreakCard";
+// // import Link from "next/link";
+// import GitHubTopLangsCard from "../github-stats/GitHubTopLangsCard";
+// import GitHubStatsCard from "../github-stats/GitHubStatsCard";
+// import GitHubStreakCard from "../github-stats/GitHubStreakCard";
 import GitHubPinnedRepoCard from "../github-stats/GitHubPinnedRepoCard";
 
 // Données statiques pour remplacer les API calls
@@ -719,7 +719,7 @@ const AboutDetails: React.FC = () => {
     <>
       <section className="py-20 w-full">
         <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full text-content-change">
-          <ItemLayout
+          {/* <ItemLayout
             className={
               "col-span-full lg:col-span-8 row-span-2 flex-col items-start glass-effect custom-btn"
             }
@@ -732,28 +732,54 @@ const AboutDetails: React.FC = () => {
             </p>
           </ItemLayout>
           
-          {/* <ItemLayout
-            className={
-              "col-span-full xs:col-span-6 lg:col-span-4 text-accent glass-effect custom-btn"
-            }
-          >
-            <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-              0+ <sub className="font-semibold text-base">clients</sub>
-            </p>
+         
+          <ItemLayout className={"col-span-full col-span-full xs:col-span-6 lg:col-span-4 text-accent glass-effect custom-btn"}>
+            <div className="">
+              <GitHubPinnedRepoCard
+                data={mockPinnedRepoData}
+                theme={{
+                  titleColor: '#0066cc',
+                  textColor: '#000000',
+                  iconColor: '#0066cc',
+                  hideBorder: true,
+                }}
+                />
+            </div>
           </ItemLayout>
-          
-          <ItemLayout
-            className={
-              "col-span-full xs:col-span-6 lg:col-span-4 text-accent glass-effect custom-btn"
-            }
-          >
-            <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-              4+ <sub className="font-semibold text-base">years of experience</sub>
-            </p>
-          </ItemLayout> */}
+           */}
+
+
+           <ItemLayout
+  className={
+    "col-span-full lg:col-span-8 flex flex-col items-start glass-effect custom-btn h-full"
+  }
+>
+  <h2 className="text-xl md:text-2xl text-left w-full capitalize">
+    Architecte de l'Enchantement
+  </h2>
+  <p className="font-light text-xs sm:text-sm md:text-base flex-grow">
+    Mon voyage dans le développement web est porté par une panoplie d'outils et de langages mystiques, avec JavaScript jetant le sort central de mes enchantements. Je manie des frameworks tels que React.js et Next.js avec précision, façonnant des portails (sites web) fluides qui relient des royaumes (utilisateurs) à travers l'univers numérique. Les arts anciens du Jamstack me confèrent le pouvoir de créer des expériences rapides, sécurisées et dynamiques, tandis que mes compétences en design garantissent que chaque création soit non seulement fonctionnelle mais aussi visuellement captivante. Rejoins-moi alors que je continue d'explorer de nouveaux sorts et technologies pour façonner l'avenir du web.
+  </p>
+</ItemLayout>
+
+<ItemLayout 
+  className={"col-span-full lg:col-span-4 flex flex-col glass-effect custom-btn h-full"}
+>
+  <div className="w-full h-full flex flex-col">
+    <GitHubPinnedRepoCard
+      data={mockPinnedRepoData}
+      theme={{
+        titleColor: '#0066cc',
+        textColor: '#000000',
+        iconColor: '#0066cc',
+        hideBorder: true,
+      }}
+    />
+  </div>
+</ItemLayout>
           
           {/* Top Languages Card - Version Offline */}
-          <ItemLayout
+          {/* <ItemLayout
             className={"col-span-full sm:col-span-6 md:col-span-4 !p-0 glass-effect"}
           >
             <div className="w-full h-full">
@@ -768,10 +794,10 @@ const AboutDetails: React.FC = () => {
                 }}
               />
             </div>
-          </ItemLayout>
+          </ItemLayout> */}
           
           {/* GitHub Stats Card - Version Offline */}
-          <ItemLayout className={"col-span-full md:col-span-8 !p-0 glass-effect"}>
+          {/* <ItemLayout className={"col-span-full md:col-span-8 !p-0 glass-effect"}>
             <div className="w-full h-full">
               <GitHubStatsCard
                 data={mockStatsData}
@@ -783,7 +809,7 @@ const AboutDetails: React.FC = () => {
                 }}
               />
             </div>
-          </ItemLayout>
+          </ItemLayout> */}
           
           {/* Technologies & Tools Section */}
           <ItemLayout className={"col-span-full"}>
@@ -818,7 +844,7 @@ const AboutDetails: React.FC = () => {
           </ItemLayout>
 
           {/* GitHub Streak Card - Version Offline */}
-          <ItemLayout className={"col-span-full md:col-span-6 !p-0 glass-effect"}>
+          {/* <ItemLayout className={"col-span-full md:col-span-6 !p-0 glass-effect"}>
             <div className="w-full h-full">
               <GitHubStreakCard
                 data={mockStreakData}
@@ -831,21 +857,7 @@ const AboutDetails: React.FC = () => {
               />
             </div>
           </ItemLayout>
-          
-          {/* GitHub Pinned Repo Card - Version Offline */}
-          <ItemLayout className={"col-span-full md:col-span-6 !p-0 glass-effect"}>
-            <div className="w-full h-full">
-              <GitHubPinnedRepoCard
-                data={mockPinnedRepoData}
-                theme={{
-                  titleColor: '#0066cc',
-                  textColor: '#000000',
-                  iconColor: '#0066cc',
-                  hideBorder: true,
-                }}
-              />
-            </div>
-          </ItemLayout>
+           */}
         </div>
       </section>
     </>
