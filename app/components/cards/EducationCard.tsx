@@ -15,16 +15,25 @@ interface Education {
 
 const educationData: Education[] = [
   {
+    degree: "Master two",
+    field: "Filière Informatique",
+    period: "Fév. 2026",
+    institution: "Ecole National de l'Informatique",
+    location: "Fianarantsoa",
+    status: 'ongoing',
+    icon: <Award size={16} />
+  },
+  {
     degree: "Master One",
     field: "Filière Informatique",
     period: "Fév. 2025 - Sept. 2025",
     institution: "Ecole National de l'Informatique",
     location: "Tuléar",
-    status: 'ongoing',
+    status: 'completed',
     icon: <Award size={16} />
   },
   {
-    degree: "Licence Pro",
+    degree: "Licence 3 professionnel",
     field: "3ème année Info",
     period: "Janv. 2024 - Sept. 2025",
     institution: "Ecole Nationale d'Informatique",
@@ -33,16 +42,16 @@ const educationData: Education[] = [
     icon: <BookOpen size={16} />
   },
   {
-    degree: "Licence Pro",
+    degree: "Licence 2 professionnel",
     field: "2ème année Info",
     period: "Fév. 2023",
-    institution: "ENI",
+    institution: "Ecole Nationale d'Informatique",
     location: "Tuléar",
     status: 'completed',
     icon: <BookOpen size={16} />
   },
   {
-    degree: "Licence Pro",
+    degree: "Licence 1 professionnel",
     field: "1ère année Info",
     period: "Fév. 2022",
     institution: "Ecole Nationale d'Informatique",
@@ -95,7 +104,7 @@ const EducationCard: React.FC = () => {
               </p>
             </div>
             <div className="flex flex-col items-end text-right flex-shrink-0">
-              <span className="text-xl font-bold text-accent">5</span>
+              <span className="text-xl font-bold text-accent">6</span>
               <span className="text-[10px] text-muted-foreground uppercase">Diplômes</span>
             </div>
           </div>

@@ -31,7 +31,7 @@ const experienceData: Experience[] = [
     period: "Oct. - Nov. 2024",
     company: "Service régional solde",
     location: "Toliara",
-    type: 'project',
+    type: 'internship',
     technologies: ['Web', 'Archives'],
     icon: <Building2 size={16} />
   },
@@ -51,7 +51,7 @@ const experienceData: Experience[] = [
     period: "Mars - Juin 2022",
     company: "ENI",
     location: "Toliara",
-    type: 'project',
+    type: 'stage',
     technologies: ['RH', 'Web'],
     icon: <Users size={16} />
   },
@@ -61,7 +61,7 @@ const experienceData: Experience[] = [
     period: "Fév. - Avr. 2022",
     company: "ENI",
     location: "Toliara",
-    type: 'project',
+    type: 'stage',
     technologies: ['Finance', 'Web'],
     icon: <Code2 size={16} />
   }
