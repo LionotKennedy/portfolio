@@ -78,11 +78,13 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
         <div className="hidden sm:block w-px h-4 bg-white/20" />
         <div className="flex items-center gap-1.5 text-xs sm:text-sm text-accent">
           <span className="w-2 h-2 rounded-full bg-green-500" />
-          {projects.filter((_, i) => i % 2 === 0).length} terminés
+          {/* {projects.filter((_, i) => i % 2 === 0).length} terminés */}
+          {projects.length} terminés
         </div>
         <div className="flex items-center gap-1.5 text-xs sm:text-sm text-accent">
           <span className="w-2 h-2 rounded-full bg-amber-500" />
-          {projects.filter((_, i) => i % 2 !== 0).length} en cours
+          {/* {projects.filter((_, i) => i % 2 !== 0).length} en cours */}
+          0 en cours
         </div>
       </div>
 

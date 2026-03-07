@@ -146,7 +146,7 @@ Base de donnée(MySQL, PostgreSQL, SQLite, MongoDB, Firebase)
 Git & GitHub
 Methodes Agiles
 Python(Django, FastAPI)
-JAVA(swing, spring & spring boot)
+JAVA(Swing, Spring & Spring Boot)
 Dart(Flutter)
 PHP(Laravel)
 PHP(Symfony)
