@@ -19,17 +19,7 @@ const Contact = (): JSX.Element => {
             Envoyer un message
           </h1>
           <p className="text-center font-light text-sm xs:text-base text-content-change">
-            {/* Step into the circle of enchantment and weave your words into the
-            fabric of the cosmos. Whether you seek to conjure collaborations,
-            unlock mysteries, or simply share tales of adventure, your messages
-            are treasured scrolls within this realm. Use the form below to send
-            your missives through the ethereal network, and await the whisper of
-            magic in response. */}
-            Entrez dans le cercle de l’enchantement et tissez vos mots dans la trame du cosmos. 
-            Que vous cherchiez à susciter des collaborations, à percer des mystères ou simplement 
-            à partager des récits d’aventure, vos messages sont des parchemins précieux dans ce royaume. 
-            Utilisez le formulaire ci‑dessous pour envoyer vos missives à travers le réseau éthéré, 
-            et attendez le murmure de la magie en retour.
+            Vous avez un projet en tête ou des besoins spécifiques ? Je serais ravi d'échanger avec vous pour en discuter. À l'écoute de toutes vos propositions de collaboration — que ce soit pour une mission freelance, hybride ou stage, ou toute autre opportunité — je m'engage à vous apporter des solutions adaptées à vos attentes. N'hésitez pas à me contacter via le formulaire ci-dessous ou par e-mail. Au plaisir d'échanger avec vous !
           </p>
         </div>
         <Form />

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-// import "./globals.css";
-// import "./globals2.css";
 import "./globals3.css";
-// import "./globals4.css";
-// import "./globals5.css";
 import "./components/style/index.css";
 import clsx from "clsx";
 import FireFliesBackground from "./components/FireFliesBackground";
+import LanguageToggleBtn from "./components/LanguageToggleBtn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +41,7 @@ export default function RootLayout({
       <body className={clsx(inter.variable, "bg-background text-foreground font-inter")}>
         {children}
         <FireFliesBackground />
+        <LanguageToggleBtn />
       </body>
     </html>
   );
