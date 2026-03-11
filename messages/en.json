@@ -46,5 +46,177 @@
         "error": "Something went wrong, please try again."
       }
     }
+  },
+  "About": {
+    "pageTitle": "About Me",
+    "personalInfo": {
+      "title": "Personal Information",
+      "subtitle": "About me",
+      "sectionsCount": "Sections",
+      "sections": {
+        "aboutMe": {
+          "title": "About me",
+          "emoji": "👨‍💻",
+          "content": "Hello, I am [Lionot RAZAFIMANIDIMBY], a [5th year computer science] student, currently preparing my engineering degree. I consider myself a junior developer with a solid theoretical and practical base acquired through various school and personal projects."
+        },
+        "objective": {
+          "title": "Professional objective",
+          "emoji": "🎯",
+          "content": "I am looking for a [freelance or hybrid] mission, to continue training while putting my skills at the service of your projects. Open to other collaborations."
+        },
+        "resources": {
+          "title": "My resources",
+          "emoji": "💻",
+          "content": "Complete equipment for [remote or hybrid] work. Operational quickly, easy integration with your tools and methods."
+        },
+        "salary": {
+          "title": "Salary expectations",
+          "emoji": "💰",
+          "content": "[CDI:] To be negotiated according to responsibilities. [Free/CDD:] Flexible rate depending on complexity."
+        }
+      },
+      "footer": {
+        "available": "Available",
+        "types": "Freelance & CDI",
+        "year": "5th year"
+      }
+    },
+    "featuredProject": {
+      "title": "Featured Project",
+      "subtitle": "GitHub Repository",
+      "tech": "TypeScript",
+      "stars": "12 stars"
+    },
+    "education": {
+      "title": "Diplomas & Training",
+      "subtitle": "Academic background",
+      "count": "Diplomas",
+      "ongoing": "In progress",
+      "completed": "completed",
+      "footer": "Continuous training",
+      "current": "Master two in progress",
+      "degrees": {
+        "master2": {
+          "degree": "Master two",
+          "field": "Computer Science",
+          "period": "Feb. 2026",
+          "institution": "National School of Informatics",
+          "location": "Fianarantsoa"
+        },
+        "master1": {
+          "degree": "Master One",
+          "field": "Computer Science",
+          "period": "Feb. 2025 - Sept. 2025",
+          "institution": "National School of Informatics",
+          "location": "Tuléar"
+        },
+        "licence3": {
+          "degree": "Professional License 3",
+          "field": "3rd year Info",
+          "period": "Jan. 2024 - Sept. 2025",
+          "institution": "National School of Informatics",
+          "location": "Tuléar"
+        },
+        "licence2": {
+          "degree": "Professional License 2",
+          "field": "2nd year Info",
+          "period": "Feb. 2023",
+          "institution": "National School of Informatics",
+          "location": "Tuléar"
+        },
+        "licence1": {
+          "degree": "Professional License 1",
+          "field": "1st year Info",
+          "period": "Feb. 2022",
+          "institution": "National School of Informatics",
+          "location": "Tuléar"
+        },
+        "bac": {
+          "degree": "Baccalaureate",
+          "field": "Series D",
+          "period": "Aug. 2018 - Sept. 2019",
+          "institution": "Antaninarenina High School",
+          "location": "Tuléar"
+        }
+      }
+    },
+    "experience": {
+      "title": "Professional Experiences",
+      "subtitle": "Projects & Missions",
+      "count": "Projects",
+      "available": "Available",
+      "seeMore": "See more",
+      "types": {
+        "freelance": "Free",
+        "internship": "Internship",
+        "project": "Project",
+        "stage": "Internship"
+      },
+      "jobs": {
+        "ecommerce": {
+          "title": "E-commerce Redesign",
+          "description": "Complete redesign to improve performance and UX",
+          "period": "May - Jul. 2025",
+          "company": "Freelancer",
+          "location": "Madagascar",
+          "technologies": [
+            "React",
+            "Node.js",
+            "Perf"
+          ]
+        },
+        "mail": {
+          "title": "Mail & Archives Management",
+          "description": "Web app for document and archive management",
+          "period": "Oct. - Nov. 2024",
+          "company": "Regional salary service",
+          "location": "Toliara",
+          "technologies": [
+            "Web",
+            "Archives"
+          ]
+        },
+        "billing": {
+          "title": "Billing Tracking",
+          "description": "Internship in management and billing tracking",
+          "period": "Aug. - Nov. 2023",
+          "company": "OpenData Madagascar",
+          "location": "Antsirabe",
+          "technologies": [
+            "Data",
+            "Tracking"
+          ]
+        },
+        "hr": {
+          "title": "Employee Management",
+          "description": "HR management system for the school",
+          "period": "Mar. - Jun. 2022",
+          "company": "ENI",
+          "location": "Toliara",
+          "technologies": [
+            "HR",
+            "Web"
+          ]
+        },
+        "church": {
+          "title": "Church Cash Management",
+          "description": "Financial management app for organization",
+          "period": "Feb. - Apr. 2022",
+          "company": "ENI",
+          "location": "Toliara",
+          "technologies": [
+            "Finance",
+            "Web"
+          ]
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies & Tools"
+    },
+    "aboutPage": {
+      "title": "About Me",
+      "subtitle": "Meet the creative mind behind this portfolio"
+    }
   }
 }

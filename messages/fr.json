@@ -46,5 +46,177 @@
         "error": "Une erreur s'est produite, veuillez réessayer."
       }
     }
+  },
+  "About": {
+    "pageTitle": "À propos de moi",
+    "personalInfo": {
+      "title": "Informations Personnelles",
+      "subtitle": "À propos de moi",
+      "sectionsCount": "Sections",
+      "sections": {
+        "aboutMe": {
+          "title": "À propos de moi",
+          "emoji": "👨‍💻",
+          "content": "Bonjour, je suis <>{Lionot RAZAFIMANIDIMBY}</>, étudiant en <>{5ème année d'informatique}</>, actuellement en préparation de mon diplôme d'ingénieur. Je me considère comme un développeur junior avec une solide base théorique et pratique acquise à travers divers projets scolaires et personnels."
+        },
+        "objective": {
+          "title": "Objectif professionnel",
+          "emoji": "🎯",
+          "content": "Je recherche une mission en <>{freelance ou hybride}</>, pour continuer à me former tout en mettant mes compétences au service de vos projets. Ouvert à d'autres collaborations."
+        },
+        "resources": {
+          "title": "Mes ressources",
+          "emoji": "💻",
+          "content": "Équipement complet pour travail <>{distance ou hybride}</>. Opérationnel rapidement, intégration facile à vos outils et méthodes."
+        },
+        "salary": {
+          "title": "Prétentions salariales",
+          "emoji": "💰",
+          "content": "<>{CDI:}</> À négocier selon responsabilités. <>{Free/CDD:}</> Tarif flexible selon complexité."
+        }
+      },
+      "footer": {
+        "available": "Disponible",
+        "types": "Freelance & CDI",
+        "year": "5ème année"
+      }
+    },
+    "featuredProject": {
+      "title": "Projet en Vedette",
+      "subtitle": "GitHub Repository",
+      "tech": "TypeScript",
+      "stars": "12 stars"
+    },
+    "education": {
+      "title": "Diplômes & Formations",
+      "subtitle": "Parcours académique",
+      "count": "Diplômes",
+      "ongoing": "En cours",
+      "completed": "complétés",
+      "footer": "Formation continue",
+      "current": "Master two en cours",
+      "degrees": {
+        "master2": {
+          "degree": "Master two",
+          "field": "Filière Informatique",
+          "period": "Fév. 2026",
+          "institution": "Ecole National de l'Informatique",
+          "location": "Fianarantsoa"
+        },
+        "master1": {
+          "degree": "Master One",
+          "field": "Filière Informatique",
+          "period": "Fév. 2025 - Sept. 2025",
+          "institution": "Ecole National de l'Informatique",
+          "location": "Tuléar"
+        },
+        "licence3": {
+          "degree": "Licence 3 professionnel",
+          "field": "3ème année Info",
+          "period": "Janv. 2024 - Sept. 2025",
+          "institution": "Ecole Nationale d'Informatique",
+          "location": "Tuléar"
+        },
+        "licence2": {
+          "degree": "Licence 2 professionnel",
+          "field": "2ème année Info",
+          "period": "Fév. 2023",
+          "institution": "Ecole Nationale d'Informatique",
+          "location": "Tuléar"
+        },
+        "licence1": {
+          "degree": "Licence 1 professionnel",
+          "field": "1ère année Info",
+          "period": "Fév. 2022",
+          "institution": "Ecole Nationale d'Informatique",
+          "location": "Tuléar"
+        },
+        "bac": {
+          "degree": "Baccalauréat",
+          "field": "Série D",
+          "period": "Août 2018 - Sept. 2019",
+          "institution": "Lycée Antaninarenina",
+          "location": "Tuléar"
+        }
+      }
+    },
+    "experience": {
+      "title": "Expériences Professionnelles",
+      "subtitle": "Projets & Missions",
+      "count": "Projets",
+      "available": "Disponible",
+      "seeMore": "Voir plus",
+      "types": {
+        "freelance": "Free",
+        "internship": "Stage",
+        "project": "Projet",
+        "stage": "Stage"
+      },
+      "jobs": {
+        "ecommerce": {
+          "title": "Refonte E-commerce",
+          "description": "Refonte complète pour améliorer performances et UX",
+          "period": "Mai - Juil. 2025",
+          "company": "Freelancer",
+          "location": "Madagascar",
+          "technologies": [
+            "React",
+            "Node.js",
+            "Perf"
+          ]
+        },
+        "mail": {
+          "title": "Gestion Courriers & Archives",
+          "description": "App web de gestion documentaire et archives",
+          "period": "Oct. - Nov. 2024",
+          "company": "Service régional solde",
+          "location": "Toliara",
+          "technologies": [
+            "Web",
+            "Archives"
+          ]
+        },
+        "billing": {
+          "title": "Suivi Facturation",
+          "description": "Stage en gestion et suivi de facturation",
+          "period": "Août - Nov. 2023",
+          "company": "OpenData Madagascar",
+          "location": "Antsirabe",
+          "technologies": [
+            "Data",
+            "Suivi"
+          ]
+        },
+        "hr": {
+          "title": "Gestion Employés",
+          "description": "Système de gestion RH pour l'école",
+          "period": "Mars - Juin 2022",
+          "company": "ENI",
+          "location": "Toliara",
+          "technologies": [
+            "RH",
+            "Web"
+          ]
+        },
+        "church": {
+          "title": "Gestion Caisse Église",
+          "description": "App de gestion financière pour organisation",
+          "period": "Fév. - Avr. 2022",
+          "company": "ENI",
+          "location": "Toliara",
+          "technologies": [
+            "Finance",
+            "Web"
+          ]
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies & Outils"
+    },
+    "aboutPage": {
+      "title": "À propos de moi",
+      "subtitle": "Découvrez l'artisan de ce portfolio"
+    }
   }
 }
