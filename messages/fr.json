@@ -220,5 +220,10 @@
       "title": "À propos de moi",
       "subtitle": "Découvrez l'artisan de ce portfolio"
     }
-  }
+  },
+  "HomeBtn": {
+  "label": "Accueil",
+  "tooltip": "Aller à l'accueil",
+  "srOnly": "Aller à la page d'accueil"
+}
 }

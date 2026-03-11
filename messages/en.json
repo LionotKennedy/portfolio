@@ -220,5 +220,10 @@
       "title": "About Me",
       "subtitle": "Meet the creative mind behind this portfolio"
     }
-  }
+  },
+  "HomeBtn": {
+  "label": "Home",
+  "tooltip": "Go to Home",
+  "srOnly": "Go to Home Page"
+}
 }
