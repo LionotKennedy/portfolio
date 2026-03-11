@@ -47,6 +47,24 @@
       }
     }
   },
+  "Projects": {
+    "badge": "Portfolio",
+    "title": "My Projects",
+    "description": "Discover a selection of my work. Each project represents a unique technical challenge and a learning opportunity.",
+    "stats": {
+      "total": "projects",
+      "completed": "completed",
+      "inProgress": "in progress"
+    },
+    "empty": {
+      "title": "No projects yet",
+      "subtitle": "Projects will be added soon."
+    },
+    "cta": {
+      "text": "Interested in my work?",
+      "button": "See more on GitHub"
+    }
+  },
   "About": {
     "pageTitle": "About Me",
     "personalInfo": {
@@ -159,11 +177,7 @@
           "period": "May - Jul. 2025",
           "company": "Freelancer",
           "location": "Madagascar",
-          "technologies": [
-            "React",
-            "Node.js",
-            "Perf"
-          ]
+          "technologies": ["React", "Node.js", "Perf"]
         },
         "mail": {
           "title": "Mail & Archives Management",
@@ -171,10 +185,7 @@
           "period": "Oct. - Nov. 2024",
           "company": "Regional salary service",
           "location": "Toliara",
-          "technologies": [
-            "Web",
-            "Archives"
-          ]
+          "technologies": ["Web", "Archives"]
         },
         "billing": {
           "title": "Billing Tracking",
@@ -182,10 +193,7 @@
           "period": "Aug. - Nov. 2023",
           "company": "OpenData Madagascar",
           "location": "Antsirabe",
-          "technologies": [
-            "Data",
-            "Tracking"
-          ]
+          "technologies": ["Data", "Tracking"]
         },
         "hr": {
           "title": "Employee Management",
@@ -193,10 +201,7 @@
           "period": "Mar. - Jun. 2022",
           "company": "ENI",
           "location": "Toliara",
-          "technologies": [
-            "HR",
-            "Web"
-          ]
+          "technologies": ["HR", "Web"]
         },
         "church": {
           "title": "Church Cash Management",
@@ -204,10 +209,7 @@
           "period": "Feb. - Apr. 2022",
           "company": "ENI",
           "location": "Toliara",
-          "technologies": [
-            "Finance",
-            "Web"
-          ]
+          "technologies": ["Finance", "Web"]
         }
       }
     },
