@@ -41,8 +41,8 @@
 
 import type { JSX } from "react";
 import { Metadata } from "next";
-import ProjectList from "../../components/projects/index";
-import { projectsData } from "../../data/data";
+import ProjectList from "../../../components/projects/index";
+import { projectsData } from "../../../data/data";
 import BackgroundHome from "@/app/components/BackgroundHome";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function ProjectsPage(): JSX.Element {
   return (
     <main className="relative min-h-screen">
       <BackgroundHome />
-      
+
       <div className="relative z-10 pt-20 sm:pt-24 lg:pt-28">
         <ProjectList projects={projectsData} />
       </div>

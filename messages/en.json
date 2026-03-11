@@ -1,0 +1,29 @@
+{
+  "Metadata": {
+    "title": "Portfolio | Lionot RAZAFIMANDIMBY",
+    "description": "Web, Mobile and Desktop Developer"
+  },
+  "Language": {
+    "select": "Select language"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "resume": "Resume"
+  },
+  "Home": {
+    "title": "Architect of Enchantment",
+    "subtitle": "Web, Mobile and Desktop",
+    "name": "I'm RAZAFIMANDIMBY Lionot",
+    "role1": "Web",
+    "role2": "Mobile",
+    "role3": "Desktop",
+    "roleConnector": "and",
+    "developer": "Developer"
+  }
+}
