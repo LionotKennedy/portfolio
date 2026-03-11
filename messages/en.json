@@ -25,5 +25,26 @@
     "role3": "Desktop",
     "roleConnector": "and",
     "developer": "Developer"
+  },
+  "Contact": {
+    "title": "Send a message",
+    "description": "Do you have a project in mind or specific needs? I would be delighted to discuss it with you. Open to all collaboration proposals — whether for freelance, hybrid or internship missions, or any other opportunity — I am committed to providing solutions tailored to your expectations. Feel free to contact me via the form below or by email. Looking forward to hearing from you!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Cast your message!",
+      "errors": {
+        "required": "This field is required!",
+        "nameMinLength": "Name should be at least 3 characters long.",
+        "messageMaxLength": "Message should be less than 500 characters",
+        "messageMinLength": "Message should be more than 50 characters"
+      },
+      "toast": {
+        "sending": "Sending your message…",
+        "success": "Message sent! I'll get back to you soon.",
+        "error": "Something went wrong, please try again."
+      }
+    }
   }
 }

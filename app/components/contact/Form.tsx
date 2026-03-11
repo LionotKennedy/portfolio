@@ -1,8 +1,9 @@
 "use client";
+
 import type React from "react";
 import { useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
-// import { motion } from "framer-motion"
+import { useTranslations } from 'next-intl';
 
 interface FormData {
   name: string;
@@ -34,15 +35,16 @@ const item = {
 };
 
 const Form: React.FC = () => {
+  const t = useTranslations('Contact.form');
   const {
     register,
     handleSubmit,
-    reset,            // ← NEW
+    reset,
     formState: { errors },
   } = useForm<FormData>();
 
   const sendEmail = async (params: TemplateParams) => {
-    const toastId = toast.loading('Sending your message…');
+    const toastId = toast.loading(t('toast.sending'));
 
     try {
       const res = await fetch('/api/send', {
@@ -57,10 +59,10 @@ const Form: React.FC = () => {
 
       if (!res.ok) throw new Error();
 
-      toast.success('Message sent! I’ll get back to you soon.', { id: toastId });
-      reset(); // ← NEW : vide le formulaire uniquement si succès
+      toast.success(t('toast.success'), { id: toastId });
+      reset();
     } catch {
-      toast.error('Something went wrong, please try again.', { id: toastId });
+      toast.error(t('toast.error'), { id: toastId });
     }
   };
 
@@ -80,18 +82,16 @@ const Form: React.FC = () => {
       <Toaster richColors={true} />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        // onSubmit={handleSubmit(sendEmail)} // on passe directement data
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
       >
         <input
-          //   variants={item}
           type="text"
-          placeholder="name"
+          placeholder={t('name')}
           {...register("name", {
-            required: "This field is required!",
+            required: t('errors.required'),
             minLength: {
               value: 3,
-              message: "Name should be atleast 3 characters long.",
+              message: t('errors.nameMinLength'),
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 
@@ -104,10 +104,9 @@ const Form: React.FC = () => {
         )}
 
         <input
-          //   variants={item}
           type="email"
-          placeholder="email"
-          {...register("email", { required: "This field is required!" })}
+          placeholder={t('email')}
+          {...register("email", { required: t('errors.required') })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
           glass-effect custom-btn text-content-change"
         />
@@ -118,17 +117,16 @@ const Form: React.FC = () => {
         )}
 
         <textarea
-          //   variants={item}
-          placeholder="message"
+          placeholder={t('message')}
           {...register("message", {
-            required: "This field is required!",
+            required: t('errors.required'),
             maxLength: {
               value: 500,
-              message: "Message should be less than 500 characters",
+              message: t('errors.messageMaxLength'),
             },
             minLength: {
               value: 50,
-              message: "Message should be more than 50 characters",
+              message: t('errors.messageMinLength'),
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50
@@ -141,9 +139,7 @@ const Form: React.FC = () => {
         )}
 
         <input
-          //   variants={item}
-          // value="Cast your message!"
-          value=" Projette ton message ! "
+          value={t('submit')}
           className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
       hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
       custom-btn text-content-change bg-background-btn-contact"

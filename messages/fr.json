@@ -4,8 +4,8 @@
     "description": "Développeur Web, Mobile et Desktop"
   },
   "Language": {
-  "select": "Choisir la langue"
-},
+    "select": "Choisir la langue"
+  },
   "Navigation": {
     "home": "Accueil",
     "about": "À propos",
@@ -25,5 +25,26 @@
     "role3": "Desktop",
     "roleConnector": "et",
     "developer": "Développeur"
+  },
+  "Contact": {
+    "title": "Envoyer un message",
+    "description": "Vous avez un projet en tête ou des besoins spécifiques ? Je serais ravi d'échanger avec vous pour en discuter. À l'écoute de toutes vos propositions de collaboration — que ce soit pour une mission freelance, hybride ou stage, ou toute autre opportunité — je m'engage à vous apporter des solutions adaptées à vos attentes. N'hésitez pas à me contacter via le formulaire ci-dessous ou par e-mail. Au plaisir d'échanger avec vous !",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Projette ton message !",
+      "errors": {
+        "required": "Ce champ est requis !",
+        "nameMinLength": "Le nom doit contenir au moins 3 caractères.",
+        "messageMaxLength": "Le message doit contenir moins de 500 caractères",
+        "messageMinLength": "Le message doit contenir plus de 50 caractères"
+      },
+      "toast": {
+        "sending": "Envoi de votre message…",
+        "success": "Message envoyé ! Je vous répondrai bientôt.",
+        "error": "Une erreur s'est produite, veuillez réessayer."
+      }
+    }
   }
 }
