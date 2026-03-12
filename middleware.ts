@@ -1,70 +1,16 @@
-// import createMiddleware from 'next-intl/middleware';
-// import { routing } from './app/i18n/routing';
-
-// export default createMiddleware(routing);
-
-// export const config = {
-//   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\.png$).*)']
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // middleware.ts (à la racine du projet)
-// import createMiddleware from 'next-intl/middleware';
-// import { routing } from './app/i18n/routing';
-
-// export default createMiddleware(routing);
-
-// export const config = {
-//   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\.png$).*)']
-// };
-
-
-
-
-
-
-
-
-
-
-// // middleware.ts (à la racine du projet)
-// import createMiddleware from 'next-intl/middleware';
-// // import { routing } from './i18n/routing';
-// import { routing } from './i18n/routing'; 
-
-// export default createMiddleware(routing);
-
-// export const config = {
-//   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\.png$).*)']
-// };
-
-
-
-
-
-
-
-
-
+// middleware.ts
 import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing'; // ← racine, pas app/
+import { routing } from './i18n/routing';
 
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\.png$).*)']
+  // On ajoute une exception pour ne pas matcher les fichiers avec des extensions (pdf, png, etc.)
+  matcher: [
+    // Match toutes les pages sauf les fichiers statiques et les APIs
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+    // Match les locales
+    '/',
+    '/(fr|en)/:path*'
+  ]
 };
-
