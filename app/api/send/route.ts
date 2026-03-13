@@ -3,8 +3,8 @@ import nodemailer from 'nodemailer';
 
 // Schéma ultra-simple (optionnel si tu valides déjà dans le form)
 interface Body {
-  name:    string;
-  email:   string;
+  name: string;
+  email: string;
   message: string;
 }
 

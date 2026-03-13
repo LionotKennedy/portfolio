@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 const ContactContent = () => {
   const t = useTranslations('Contact');
-  
+
   return (
     <>
       <h1 className="text-accent font-semibold text-center text-4xl capitalize">
