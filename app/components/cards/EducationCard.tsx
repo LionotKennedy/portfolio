@@ -105,8 +105,11 @@ const EducationCard: React.FC = () => {
               <div
                 key={edu.key}
                 className="group p-3 rounded-lg bg-white/5 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all flex items-center gap-3"
-                data-aos="fade-left"
-                data-aos-delay={index * 80}
+                data-aos="slide-right"
+                // data-aos="fade-left"
+                // data-aos="fade-down"
+                // data-aos-delay={index * 80}
+                data-aos-delay="800"
               >
                 <div className={`flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center ${edu.status === 'ongoing' ? 'bg-accent/20 text-accent' : 'bg-white/10 text-muted-foreground group-hover:text-accent'
                   }`}>

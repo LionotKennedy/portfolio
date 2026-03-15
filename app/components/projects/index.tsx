@@ -71,7 +71,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
       <div
         className="flex flex-wrap items-center gap-4 mb-6 sm:mb-8 p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10"
         data-aos="fade-up"
-        data-aos-delay="300"
+        data-aos-delay="600"
       >
         <div className="flex items-center gap-2">
           <FolderOpen size={18} className="text-accent" />
@@ -95,7 +95,8 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
           return (
             <div
               key={project.id}
-              data-aos="fade-up"
+              // data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay={400 + (index * 100)}
             >
               <ProjectLayout {...project} tags={tags} />

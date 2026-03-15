@@ -91,8 +91,10 @@ const ExperienceCard: React.FC = () => {
                 <div
                   key={exp.key}
                   className={`group p-2.5 sm:p-3 rounded-lg bg-white/5 border border-white/10 hover:border-accent/30 ${typeConfig.bgHover} transition-all cursor-pointer`}
+                  // data-aos="slide-left"
+                  // data-aos-delay={index * 100}
                   data-aos="slide-left"
-                  data-aos-delay={index * 100}
+                  data-aos-delay="800"
                 >
                   <div className="flex items-start gap-2.5 sm:gap-3">
                     <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${typeConfig.color.split(' ')[0]}`}>

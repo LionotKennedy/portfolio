@@ -102,13 +102,13 @@ export const svgData: SvgPack[] = [
     alt: "C",
     cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
   },
-  {
-    id: "C++",
-    type: "single",
-    src: imageSVG7,
-    alt: "C++",
-    cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
-  },
+  // {
+  //   id: "C++",
+  //   type: "single",
+  //   src: imageSVG7,
+  //   alt: "C++",
+  //   cols: "col-span-full sm:col-span-6 md:col-span-1 !p-0",
+  // },
   {
     id: "C#",
     type: "single",

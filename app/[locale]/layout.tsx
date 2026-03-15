@@ -1,20 +1,19 @@
-// app/[locale]/layout.tsx
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { Inter } from 'next/font/google';
-import '../globals3.css';
-import '../components/style/index.css';
-import clsx from 'clsx';
-import FireFliesBackground from '../components/FireFliesBackground';
-import LanguageToggleBtn from '../components/LanguageToggleBtn';
-import { routing } from '../../i18n/routing';
-import AOSInit from '../components/AOSInit'
+// app/[locale]/layout.tsx CLAUDE
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, getTranslations } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+import { Inter } from 'next/font/google'
+import '../globals3.css'
+import '../components/style/index.css'
+import clsx from 'clsx'
+import FireFliesBackground from '../components/FireFliesBackground'
+import LanguageToggleBtn from '../components/LanguageToggleBtn'
+import { routing } from '../../i18n/routing'
+// import AOSInit from '../components/AOS/AOSInit'
+import PageCurtain from '../components/curtain/PageCurtain'
+import AOSProvider from '../components/AOS/AOSProvider';
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -30,28 +29,29 @@ export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
 }) {
-  const { locale } = await params;
+  const { locale } = await params
 
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
+  if (!routing.locales.includes(locale as any)) notFound()
 
-  const messages = await getMessages();
+  const messages = await getMessages()
 
   return (
     <html lang={locale}>
       <body className={clsx(inter.variable, "bg-background text-foreground font-inter relative")}>
         <div id="my-modal" />
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <AOSInit />
-          <LanguageToggleBtn />
-          {children}
-          <FireFliesBackground />
+          <AOSProvider>
+            <PageCurtain />
+            {/* <AOSInit /> */}
+            <LanguageToggleBtn />
+            {children}
+            <FireFliesBackground />
+          </AOSProvider>
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }

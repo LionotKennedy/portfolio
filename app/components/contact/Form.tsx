@@ -83,6 +83,12 @@ const Form: React.FC = () => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
+        // data-aos="fade-left"
+        data-aos="zoom-in"
+        data-aos-delay="800"
+        data-aos-duration="800"
+
+
       >
         <input
           type="text"

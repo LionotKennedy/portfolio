@@ -142,3 +142,70 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+
+
+
+
+
+/* Animations pour le rideau KIMI*/
+@keyframes curtainPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.curtain-glow {
+  animation: curtainPulse 2s ease-in-out infinite;
+}
+
+/* Empêcher le scroll pendant la transition */
+body.curtain-locked {
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* Couleurs du rideau — s'adapte au thème CLAUDE */
+:root {
+  --curtain-dark: #0a0a0f;
+  --curtain-mid:  #13131f;
+}
+
+[data-theme="light"],
+.light {
+  --curtain-dark: #0d0d14;
+  --curtain-mid:  #1a1a2e;
+}
+
+
+/* AOS Custom Styles */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Désactiver AOS sur mobile si nécessaire */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Animations personnalisées */
+.aos-fade-up {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.aos-fade-up.aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}

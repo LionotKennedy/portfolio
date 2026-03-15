@@ -25,10 +25,10 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
   };
 
   return (
-    <Link 
-      href={demoLink} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+    <Link
+      href={demoLink}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group relative w-full block [perspective:600px] h-full"
     >
       <div className="relative p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 dark:from-black/20 dark:to-black/10 backdrop-blur-md border border-white/20 dark:border-white/10 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-700 ease-out origin-bottom group-hover:[transform:rotateX(22deg)_scale(0.95)] group-hover:shadow-2xl group-hover:shadow-accent/20 overflow-hidden h-full flex flex-col justify-between min-h-[220px] sm:min-h-[240px]">

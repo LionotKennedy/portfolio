@@ -32,7 +32,7 @@ interface InfoSection {
 
 const AboutDetails: React.FC = () => {
   const t = useTranslations('About');
-  
+
   // Fonction pour parser le contenu
   const parseContent = (content: string) => {
     return content.replace(/\[([^\]]+)\]/g, '<strong class="text-accent font-semibold">$1</strong>');
@@ -127,9 +127,9 @@ const AboutDetails: React.FC = () => {
                     </div>
 
                     {/* Section Content */}
-                    <div 
+                    <div
                       className="pl-9 text-[11px] sm:text-xs text-muted-foreground leading-relaxed"
-                      dangerouslySetInnerHTML={{ 
+                      dangerouslySetInnerHTML={{
                         __html: parseContent(t(`${section.titleKey}.content`))
                       }}
                     />
