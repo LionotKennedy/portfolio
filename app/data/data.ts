@@ -37,7 +37,7 @@ export const projectsData = [
     name: "yahwehbenyahweh",
     description: "No description, website, or topics provided.",
     date: "2025-06-13",
-    demoLink: "https://github.com/LionotKennedy/yahwehbenyahweh",
+    demoLink: "https://yahwehbenyahweh.netlify.app/",
     tags: ["typescript", "css", "html", "js"],
   },
   {
@@ -93,7 +93,7 @@ export const projectsData = [
     name: "MEF",
     description: "No description, website, or topics provided.",
     date: "2024-10-26",
-    demoLink: "https://github.com/LionotKennedy/MEF",
+    demoLink: "https://depart-srsp.netlify.app/",
     tags: ["ReactJS", "scss"],
   },
   {
