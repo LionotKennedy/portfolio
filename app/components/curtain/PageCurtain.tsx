@@ -118,7 +118,7 @@ export default function PageCurtain() {
   const pathname = usePathname()
   const prevPathRef = useRef<string | null>(null)
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
-  const { registerClose } = useCurtainRouter()
+  const { registerClose, registerOpen } = useCurtainRouter()
 
   const [isOpen, setIsOpen] = useState(false)
   const [showCenter, setShowCenter] = useState(false)
@@ -129,7 +129,6 @@ export default function PageCurtain() {
     timersRef.current = []
   }
 
-  // Séquence ouverture (arrivée sur une page)
   const runOpenSequence = (initialDelay = 600) => {
     clearAllTimers()
     setSequenceKey(k => k + 1)
@@ -142,27 +141,21 @@ export default function PageCurtain() {
     timersRef.current = [t1, t2]
   }
 
-  // Séquence fermeture (quitter une page) — retourne une Promise
   const runCloseSequence = (): Promise<void> => {
     return new Promise((resolve) => {
       clearAllTimers()
-
-      // On incrémente la clé pour forcer le remontage des panneaux depuis x:0 (ouvert)
-      // MAIS on veut qu'ils partent de leur position ouverte (xOpen) vers 0
-      // Donc on ne change PAS la clé ici, on laisse les panneaux continuer depuis leur état actuel
       setShowCenter(true)
-      setIsOpen(false) // referme le rideau (x revient à 0)
+      setIsOpen(false)
 
-      // La durée de fermeture est 0.9s (duration de la transition)
-      // On resolve après que le rideau soit bien fermé
       const t1 = setTimeout(() => resolve(), 1000)
       timersRef.current = [t1]
     })
   }
 
-  // Enregistrer la fonction de fermeture dans le contexte
+  // Enregistrer les deux fonctions dans le contexte
   useEffect(() => {
     registerClose(runCloseSequence)
+    registerOpen(() => runOpenSequence(200))
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Premier chargement
@@ -172,13 +165,13 @@ export default function PageCurtain() {
     return clearAllTimers
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Changements de route (après navigation)
+  // Changements de route
   useEffect(() => {
     if (prevPathRef.current === null) return
     if (prevPathRef.current === pathname) return
 
     prevPathRef.current = pathname
-    runOpenSequence(200) // délai court car le rideau est déjà fermé
+    runOpenSequence(200)
   }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
