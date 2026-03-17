@@ -12,6 +12,7 @@ import { routing } from '../../i18n/routing'
 // import AOSInit from '../components/AOS/AOSInit'
 import PageCurtain from '../components/curtain/PageCurtain'
 import AOSProvider from '../components/AOS/AOSProvider';
+import { CurtainProvider } from '../components/curtain/curtainContext'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
@@ -44,11 +45,13 @@ export default async function LocaleLayout({
         <div id="my-modal" />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <AOSProvider>
-            <PageCurtain />
-            {/* <AOSInit /> */}
-            <LanguageToggleBtn />
-            {children}
-            <FireFliesBackground />
+            <CurtainProvider>
+              <PageCurtain />
+              {/* <AOSInit /> */}
+              <LanguageToggleBtn />
+              {children}
+              <FireFliesBackground />
+            </CurtainProvider>
           </AOSProvider>
         </NextIntlClientProvider>
       </body>

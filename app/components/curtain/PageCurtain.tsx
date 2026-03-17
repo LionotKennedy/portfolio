@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
+import { useCurtainRouter } from "./curtainContext"
 
 const CurtainPanel = ({
   side,
@@ -10,13 +11,13 @@ const CurtainPanel = ({
 }: {
   side: "left" | "right"
   isOpen: boolean
-  sequenceKey: number  // ← force remontage à chaque séquence
+  sequenceKey: number
 }) => {
   const xOpen = side === "left" ? "-100%" : "100%"
 
   return (
     <motion.div
-      key={`${side}-${sequenceKey}`}   // ← nouveau montage = part toujours de x:0
+      key={`${side}-${sequenceKey}`}
       initial={{ x: 0 }}
       animate={{ x: isOpen ? xOpen : 0 }}
       transition={{
@@ -42,7 +43,7 @@ const CurtainPanel = ({
         >
           <defs>
             <pattern
-              id={`fold-${side}-${sequenceKey}`}   // ← id unique pour éviter conflits SVG
+              id={`fold-${side}-${sequenceKey}`}
               x="0" y="0"
               width="60" height="100%"
               patternUnits="userSpaceOnUse"
@@ -117,49 +118,67 @@ export default function PageCurtain() {
   const pathname = usePathname()
   const prevPathRef = useRef<string | null>(null)
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
+  const { registerClose } = useCurtainRouter()
 
   const [isOpen, setIsOpen] = useState(false)
   const [showCenter, setShowCenter] = useState(false)
-  const [sequenceKey, setSequenceKey] = useState(0)  // ← incrémenté à chaque séquence
+  const [sequenceKey, setSequenceKey] = useState(0)
 
   const clearAllTimers = () => {
     timersRef.current.forEach(clearTimeout)
     timersRef.current = []
   }
 
-  const runCurtainSequence = (initialDelay = 600) => {
+  // Séquence ouverture (arrivée sur une page)
+  const runOpenSequence = (initialDelay = 600) => {
     clearAllTimers()
-
-    // Incrémenter la clé → remontage complet des panneaux → x repart de 0
     setSequenceKey(k => k + 1)
-
-    // Étape 1 : rideau fermé (x:0, couvre la page) + centre visible
     setIsOpen(false)
     setShowCenter(true)
 
-    // Étape 2 : ouvrir le rideau (x:-100% / 100%)
     const t1 = setTimeout(() => setIsOpen(true), initialDelay)
-
-    // Étape 3 : cacher le centre
     const t2 = setTimeout(() => setShowCenter(false), initialDelay + 800)
 
     timersRef.current = [t1, t2]
   }
 
+  // Séquence fermeture (quitter une page) — retourne une Promise
+  const runCloseSequence = (): Promise<void> => {
+    return new Promise((resolve) => {
+      clearAllTimers()
+
+      // On incrémente la clé pour forcer le remontage des panneaux depuis x:0 (ouvert)
+      // MAIS on veut qu'ils partent de leur position ouverte (xOpen) vers 0
+      // Donc on ne change PAS la clé ici, on laisse les panneaux continuer depuis leur état actuel
+      setShowCenter(true)
+      setIsOpen(false) // referme le rideau (x revient à 0)
+
+      // La durée de fermeture est 0.9s (duration de la transition)
+      // On resolve après que le rideau soit bien fermé
+      const t1 = setTimeout(() => resolve(), 1000)
+      timersRef.current = [t1]
+    })
+  }
+
+  // Enregistrer la fonction de fermeture dans le contexte
+  useEffect(() => {
+    registerClose(runCloseSequence)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
   // Premier chargement
   useEffect(() => {
     prevPathRef.current = pathname
-    runCurtainSequence(600)
+    runOpenSequence(600)
     return clearAllTimers
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Changements de route
+  // Changements de route (après navigation)
   useEffect(() => {
     if (prevPathRef.current === null) return
     if (prevPathRef.current === pathname) return
 
     prevPathRef.current = pathname
-    runCurtainSequence(500)
+    runOpenSequence(200) // délai court car le rideau est déjà fermé
   }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
