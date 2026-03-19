@@ -16,11 +16,11 @@
     --gradient-mid: #e6f0ff;
     --gradient-end: #d1e7ff;
     --accent-color: #0066cc;
-    /* --accent-color: #ffcc00; */
     --text-color: #000000;
     --text-title-color: #232323;
     --btn-contact: rgba(33, 125, 216, 0.371);
 }
+/* --accent-color: #ffcc00; */
 
 /* :root {
     --primary-bg: #ffffff;
@@ -279,68 +279,3 @@
         transform: translateY(0);
     }
 }
-
-
-
-
-
-
-
-
-/* *, */
-/* *::before, */
-/* *::after { */
-/* margin: 0; */
-/* padding: 0; */
-/* box-sizing: border-box; */
-/* font-family: 'DM Mono', monospace; */
-/* color: var(--text-color); */
-/* text-align: center; */
-/* } */
-
-/* body {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
-    height: 100vh;
-    overflow: hidden;
-} */
-
-/* h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--accent-color), #0099ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
-} */
-
-/* h2 {
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 300;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* :root {
-    --primary-bg: #ffffff;
-    --gradient-start: #000000;
-    --gradient-mid: #030304;
-    --gradient-end: #000000;
-    --accent-color: #0066cc;
-    --text-color: #1a1a1a;
-} */
