@@ -2,7 +2,7 @@
 import Image from "next/image";
 // import TestSVG from "../../public/icons/Laravel-Light.svg"
 
-type Props = { data: import("../data/svgData").SvgPack };
+type Props = { data: import("../../app/data/svgData").SvgPack };
 
 
 // export default function SvgDisplay() {

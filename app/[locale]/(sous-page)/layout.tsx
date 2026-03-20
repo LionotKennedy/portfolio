@@ -1,7 +1,7 @@
 // SousPagesLayout.tsx
 import type React from "react"
 import type { JSX } from "react/jsx-runtime";
-import HomeBtn from "../../components/HomeBtn";
+import HomeBtn from "../../../src/components/HomeBtn";
 
 interface SousPagesLayoutProps {
   children: React.ReactNode

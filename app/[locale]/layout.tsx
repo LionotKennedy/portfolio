@@ -4,15 +4,15 @@ import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import '../globals3.css'
-import '../components/style/index.css'
+import '../../src/components/style/index.css'
 import clsx from 'clsx'
-import FireFliesBackground from '../components/FireFliesBackground'
-import LanguageToggleBtn from '../components/LanguageToggleBtn'
+import FireFliesBackground from '../../src/components/FireFliesBackground'
+import LanguageToggleBtn from '../../src/components/LanguageToggleBtn'
 import { routing } from '../../i18n/routing'
 // import AOSInit from '../components/AOS/AOSInit'
-import PageCurtain from '../components/curtain/PageCurtain'
-import AOSProvider from '../components/AOS/AOSProvider';
-import { CurtainProvider } from '../components/curtain/curtainContext'
+import PageCurtain from '../../src/components/curtain/PageCurtain'
+import AOSProvider from '../../src/components/AOS/AOSProvider';
+import { CurtainProvider } from '../../src/components/curtain/curtainContext'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 

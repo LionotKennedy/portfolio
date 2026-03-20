@@ -1,9 +1,9 @@
 // app/[locale]/contact/page.tsx
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import type { JSX } from "react/jsx-runtime";
 import { getTranslations } from 'next-intl/server'; // ← IMPORT MANQUANT
-import Form from "@/app/components/contact/Form";
-import BackgroundHome from "@/app/components/BackgroundHome";
+import Form from "@/src/components/contact/Form";
+import BackgroundHome from "@/src/components/BackgroundHome";
 import ContactContent from "./ContactContent";
 
 // ← PAS DE "use client" ICI ! C'est un Server Component

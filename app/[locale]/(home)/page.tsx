@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic'
-import Navigation from "../../components/navigation"
-import BackgroundHome from "../../components/BackgroundHome"
+import Navigation from "../../../src/components/navigation"
+import BackgroundHome from "../../../src/components/BackgroundHome"
 import "../../components/style/page.css"
 import { getTranslations } from 'next-intl/server'
 
 // Three.js chargé uniquement côté client
 const WizardImage = dynamic(
-    () => import("../../components/models/WizardImage"),
+    () => import("../../../src/components/models/WizardImage"),
     { ssr: false }
 )
 

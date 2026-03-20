@@ -1,9 +1,9 @@
 'use client';
 
 import type { JSX } from "react/jsx-runtime";
-import AboutDetails from "@/app/components/about/AboutDetails";
-import BackgroundHome from "@/app/components/BackgroundHome";
-import WizardImage from "@/app/components/models/WizardImage";
+import AboutDetails from "@/src/components/about/AboutDetails";
+import BackgroundHome from "@/src/components/BackgroundHome";
+import WizardImage from "@/src/components/models/WizardImage";
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import AOS from 'aos';

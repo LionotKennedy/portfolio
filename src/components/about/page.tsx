@@ -2,8 +2,8 @@
 // import type { Metadata } from "next";
 import type { JSX } from "react/jsx-runtime";
 import { getTranslations } from 'next-intl/server';
-import BackgroundHome from "@/app/components/BackgroundHome";
-import AboutDetails from "@/app/components/about/AboutDetails";
+import BackgroundHome from "@/src/components/BackgroundHome";
+import AboutDetails from "@/src/components/about/AboutDetails";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

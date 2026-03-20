@@ -1,7 +1,7 @@
-import Navigation from "../components/navigation";
-import BackgroundHome from "../components/BackgroundHome";
-import "../components/style/page.css"
-import WizardImage from "../components/models/WizardImage";
+import Navigation from "../../src/components/navigation";
+import BackgroundHome from "../../src/components/BackgroundHome";
+import "../../src/components/style/page.css"
+import WizardImage from "../../src/components/models/WizardImage";
 
 
 export default function Home() {

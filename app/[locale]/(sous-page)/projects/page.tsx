@@ -1,8 +1,8 @@
 import type { JSX } from "react";
 import { getTranslations } from 'next-intl/server';
-import ProjectList from "../../../components/projects/index";
+import ProjectList from "../../../../src/components/projects/index";
 import { projectsData } from "../../../data/data";
-import BackgroundHome from "@/app/components/BackgroundHome";
+import BackgroundHome from "@/src/components/BackgroundHome";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
