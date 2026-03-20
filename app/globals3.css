@@ -227,3 +227,33 @@ body.curtain-locked {
   background-color: transparent;
   backdrop-filter: blur(6px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* AOS Mobile Fix - S'assurer que tout est visible par défaut sur mobile */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Ou si tu veux juste réduire les animations */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 0.3s !important;
+    transition-delay: 0s !important;
+  }
+}
