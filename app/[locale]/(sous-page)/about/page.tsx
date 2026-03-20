@@ -1,7 +1,7 @@
 'use client';
 
 import type { JSX } from "react/jsx-runtime";
-import AboutDetails from "@/app/components/about";
+import AboutDetails from "@/app/components/about/AboutDetails";
 import BackgroundHome from "@/app/components/BackgroundHome";
 import WizardImage from "@/app/components/models/WizardImage";
 import { useTranslations } from 'next-intl';
