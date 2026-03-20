@@ -1,0 +1,17 @@
+.glass-effect {
+  background: rgba(0, 46, 107, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 46, 107, 0.3);
+}

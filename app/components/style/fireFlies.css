@@ -1,0 +1,8 @@
+.fireFliesCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* clique à travers */
+  z-index: 10;          /* au-dessus du fond noir (-1) */
+}

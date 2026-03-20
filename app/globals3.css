@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 27 27 27;
+    --foreground: 225 225 225;
+    --muted: 115 115 115;
+    --accent: 59 130 246; /* Bleu intuitif - rgb(59, 130, 246) - hex: #3B82F6 */
+  }
+}
+
+@theme {
+  --font-family-inter: var(--font-inter);
+
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-accent: rgb(var(--accent));
+
+  --background-image-firefly-radial: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(59, 130, 246, 0.5) 0%, /* Bleu au lieu de jaune */
+    rgba(217, 217, 217, 0) 100%
+  );
+
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-spin-slow-reverse: spin-reverse 40s linear infinite;
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
+.custom-btn {
+  box-shadow: inset 0 17px 5px -9px rgba(59, 130, 246, 0.05); /* Bleu */
+}
+.custom-btn:hover {
+  box-shadow: 5px 5px 20px 0px rgba(59, 130, 246, 0.3); /* Bleu */
+}
+
+.glass-effect {
+  background-color: rgba(27, 27, 27, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3); /* Bleu */
+  border-style: solid;
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 17px 5px -9px rgba(59, 130, 246, 0.05); /* Bleu */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.glass-effect:hover {
+  box-shadow: 5px 5px 20px 0px rgba(59, 130, 246, 0.3); /* Bleu */
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out;
+}
+
+.text-error {
+  color: #ef4444; /* rouge Tailwind 500 */
+}
+
+
+/* TESTE STYLE */
+
+/* Ajouter dans votre fichier CSS global */
+
+/* Scrollbar personnalisée */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* Animations pour le rideau KIMI*/
+@keyframes curtainPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.curtain-glow {
+  animation: curtainPulse 2s ease-in-out infinite;
+}
+
+/* Empêcher le scroll pendant la transition */
+body.curtain-locked {
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* Couleurs du rideau — s'adapte au thème CLAUDE */
+:root {
+  --curtain-dark: #0a0a0f;
+  --curtain-mid:  #13131f;
+}
+
+[data-theme="light"],
+.light {
+  --curtain-dark: #0d0d14;
+  --curtain-mid:  #1a1a2e;
+}
+
+
+/* AOS Custom Styles */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Désactiver AOS sur mobile si nécessaire */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Animations personnalisées */
+.aos-fade-up {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.aos-fade-up.aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+}
