@@ -1,5 +1,5 @@
 // app/[locale]/about/page.tsx
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import type { JSX } from "react/jsx-runtime";
 import { getTranslations } from 'next-intl/server';
 import BackgroundHome from "@/app/components/BackgroundHome";

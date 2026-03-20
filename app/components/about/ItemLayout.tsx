@@ -10,13 +10,7 @@ interface ItemLayoutProps {
 
 const ItemLayout: React.FC<ItemLayoutProps> = ({ children, className }) => {
   return (
-    // <motion.div
-    //   initial={{ scale: 0 }}
-    //   whileInView={{ scale: 1 }}
-    //   transition={{ duration: 0.5 }}
-    //   viewport={{ once: true }}
-    //   className={clsx("custom-bg p-6 sm:p-8 rounded-xl flex items-center justify-center space-y-8", className)}
-    // >
+ 
     <div
       className={clsx(
         "custom-bg p-6 sm:p-8 rounded-xl flex items-center justify-center space-y-8",
@@ -25,7 +19,6 @@ const ItemLayout: React.FC<ItemLayoutProps> = ({ children, className }) => {
     >
       {children}
     </div>
-    // </motion.div>
   );
 };
 
