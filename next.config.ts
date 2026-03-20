@@ -2,6 +2,11 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
-export default withNextIntl({
-  // ta config existante
-});
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    unoptimized: false,
+  },
+};
+
+export default withNextIntl(nextConfig);
