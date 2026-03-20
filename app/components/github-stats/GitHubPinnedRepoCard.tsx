@@ -38,16 +38,6 @@ const GitHubPinnedRepoCard: React.FC<GitHubPinnedRepoCardProps> = ({ data, theme
 
   return (
     <Link href={data.url} target="_blank" className="block h-full">
-      {/* <div className={`
-        rounded-lg p-4 md:p-6 backdrop-blur-sm
-        ${theme.hideBorder ? '' : 'border border-gray-200 dark:border-gray-700'}
-        bg-gradient-to-br from-white/5 to-white/10
-        dark:from-gray-900/20 dark:to-gray-800/30
-        hover:from-white/10 hover:to-white/15
-        dark:hover:from-gray-900/30 dark:hover:to-gray-800/40
-        transition-all duration-300 hover:scale-[1.01] hover:shadow-md
-        cursor-pointer group h-full
-      `}> */}
       <div>
         <div className="flex items-start justify-between mb-3 md:mb-4">
           <div className="flex items-center space-x-2 md:space-x-3">
