@@ -20,6 +20,7 @@ const Wizard = () => {
                 overflow-hidden
                 border-4 border-accent/40
                 shadow-glass-inset
+                profile__perfil
             ">
 
                 <Image

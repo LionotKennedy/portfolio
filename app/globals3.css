@@ -230,15 +230,6 @@ body.curtain-locked {
 
 
 
-
-
-
-
-
-
-
-
-
 /* AOS Mobile Fix - S'assurer que tout est visible par défaut sur mobile */
 @media (max-width: 768px) {
   [data-aos] {
@@ -255,5 +246,70 @@ body.curtain-locked {
     transform: translateY(0);
     transition-duration: 0.3s !important;
     transition-delay: 0s !important;
+  }
+}
+
+
+
+
+/* Mobile : Forcer la visibilité après 1.5s si AOS ne répond pas */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  /* Fallback : rendre visible après 1.5s maximum */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-aos]:not(.aos-animate) {
+      animation: forceVisible 1.5s forwards;
+      animation-delay: 1.5s;
+    }
+  }
+}
+
+@keyframes forceVisible {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+
+.profile__perfil {
+  /* width: 100px;
+  height: 100px; */
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    hsl((--hue), var(--sat), var(--lig), 1) 0%,
+    hsl((--hue), var(--sat), var(--lig), 0.2) 10%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: profile__animate 8s ease-in-out infinite 1s;
+  /* border: 10px solid rgba(118, 113, 112, 0.263); */
+  border: 10px solid #1b1b1b30;
+  /* border: 10px solid rgb(var(--accent)); */
+}
+
+
+@keyframes profile__animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
